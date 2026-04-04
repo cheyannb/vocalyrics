@@ -114,7 +114,7 @@ export default function SongDetail() {
         {/* Video */}
         <div className="rounded-2xl overflow-hidden border border-border mb-8 aspect-video bg-black">
           <iframe
-            src={`https://www.youtube.com/embed/${song.youtube_id}`}
+            src={`https://www.youtube-nocookie.com/embed/${song.youtube_id}?rel=0&modestbranding=1`}
             title={song.title}
             className="w-full h-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
