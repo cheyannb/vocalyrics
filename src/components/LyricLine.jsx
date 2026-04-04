@@ -1,5 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import { Bookmark, BookmarkCheck } from "lucide-react";
+import { Bookmark, BookmarkCheck, Volume2 } from "lucide-react";
+
+function speakJapanese(text) {
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "ja-JP";
+  utterance.rate = 0.9;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+}
 
 export default function LyricLine({ segments, showFurigana, isActive, isPast, savedWords = [], onToggleSave }) {
   const [popup, setPopup] = useState(null); // { index, rect }
@@ -63,7 +71,16 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
                   )}
                 </div>
                 <div className="flex items-start justify-between gap-2 mb-1">
-                  <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
+                    <button
+                      onClick={(e) => { e.stopPropagation(); speakJapanese(seg.text); }}
+                      className="p-1 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-all"
+                      title="Pronounce"
+                    >
+                      <Volume2 className="w-3 h-3" />
+                    </button>
+                  </div>
                   {onToggleSave && (
                     <button
                       onClick={(e) => { e.stopPropagation(); onToggleSave({ word: seg.text, reading: seg.reading || "", meaning: seg.meaning || "" }); }}
