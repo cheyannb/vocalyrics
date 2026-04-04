@@ -23,10 +23,10 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast }) 
         const isOpen = popup === i;
 
         const baseColor = isActive
-          ? isVocab ? "text-red-400" : isGrammar ? "text-blue-400" : "text-primary"
+          ? "text-primary"
           : isPast
-          ? isVocab ? "text-red-400/30" : isGrammar ? "text-blue-400/30" : "text-muted-foreground/30"
-          : isVocab ? "text-red-400/70" : isGrammar ? "text-blue-400/70" : "text-muted-foreground/60";
+          ? "text-muted-foreground/30"
+          : "text-muted-foreground/60";
 
         const underline = isVocab
           ? "underline decoration-red-400 underline-offset-4"
