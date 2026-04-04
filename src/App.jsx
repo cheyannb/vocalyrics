@@ -11,6 +11,7 @@ import Songs from './pages/Songs';
 import SongDetail from './pages/SongDetail';
 import Vocabulary from './pages/Vocabulary';
 import Quiz from './pages/Quiz';
+import Study from './pages/Study';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -44,6 +45,7 @@ const AuthenticatedApp = () => {
         <Route path="/songs/:songTitle" element={<SongDetail />} />
         <Route path="/vocabulary" element={<Vocabulary />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/study" element={<Study />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Routes>
