@@ -35,22 +35,6 @@ export const SONG_DATA = [
     ]
   },
   {
-    title: "ECHO",
-    title_jp: "ECHO",
-    artist: "Crusher-P",
-    category: "Highest-Viewed Hits",
-    youtube_url: "https://www.youtube.com/watch?v=cQKGUgOfD8U",
-    youtube_id: "cQKGUgOfD8U",
-    difficulty: "Beginner",
-    vocabulary: [
-      { word: "声", reading: "こえ (koe)", meaning: "voice" },
-      { word: "闇", reading: "やみ (yami)", meaning: "darkness" },
-      { word: "響く", reading: "ひびく (hibiku)", meaning: "to echo/resound" },
-      { word: "叫ぶ", reading: "さけぶ (sakebu)", meaning: "to scream" },
-      { word: "壊れる", reading: "こわれる (kowareru)", meaning: "to break" },
-    ]
-  },
-  {
     title: "Love Me, Love Me, Love Me",
     title_jp: "愛して愛して愛して",
     artist: "Kikuo",
