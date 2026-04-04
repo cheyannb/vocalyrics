@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
+import { Bookmark, BookmarkCheck } from "lucide-react";
 
-export default function LyricLine({ segments, showFurigana, isActive, isPast }) {
+export default function LyricLine({ segments, showFurigana, isActive, isPast, savedWords = [], onToggleSave }) {
   const [popup, setPopup] = useState(null); // { index, rect }
   const lineRef = useRef(null);
 
@@ -61,8 +62,24 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast }) 
                     <span className="font-jp text-xs text-muted-foreground">{seg.reading}</span>
                   )}
                 </div>
-                <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
-                <p className="text-xs text-muted-foreground mt-1">{seg.meaning}</p>
+                <div className="flex items-start justify-between gap-2 mb-1">
+                  <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
+                  {onToggleSave && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); onToggleSave({ word: seg.text, reading: seg.reading || "", meaning: seg.meaning || "" }); }}
+                      className={`shrink-0 p-1 rounded-lg transition-all ${
+                        savedWords.some((w) => w.word === seg.text)
+                          ? "bg-primary/20 text-primary"
+                          : "bg-secondary text-muted-foreground hover:text-primary"
+                      }`}
+                    >
+                      {savedWords.some((w) => w.word === seg.text)
+                        ? <BookmarkCheck className="w-3.5 h-3.5" />
+                        : <Bookmark className="w-3.5 h-3.5" />}
+                    </button>
+                  )}
+                </div>
+                <p className="text-xs text-muted-foreground">{seg.meaning}</p>
                 <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-0 h-0 border-l-6 border-r-6 border-b-6 border-l-transparent border-r-transparent border-b-border" />
               </div>
             )}

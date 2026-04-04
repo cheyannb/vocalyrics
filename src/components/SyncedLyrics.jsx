@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import LyricLine from "./LyricLine";
 
-export default function SyncedLyrics({ lines, currentTime }) {
+export default function SyncedLyrics({ lines, currentTime, savedWords, onToggleSave }) {
   const containerRef = useRef(null);
   const activeRef = useRef(null);
   const [showFurigana, setShowFurigana] = useState(false);
@@ -59,6 +59,8 @@ export default function SyncedLyrics({ lines, currentTime }) {
                   showFurigana={showFurigana}
                   isActive={isActive}
                   isPast={isPast}
+                  savedWords={savedWords}
+                  onToggleSave={onToggleSave}
                 />
               ) : (
                 <p className={`font-jp text-center text-base transition-all duration-300 ${

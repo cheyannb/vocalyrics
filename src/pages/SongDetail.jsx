@@ -120,7 +120,12 @@ export default function SongDetail() {
         {/* Synced Lyrics */}
         {song.lyrics_lines && song.lyrics_lines.length > 0 && (
           <div className="mb-8">
-            <SyncedLyrics lines={song.lyrics_lines} currentTime={currentTime} />
+            <SyncedLyrics
+              lines={song.lyrics_lines}
+              currentTime={currentTime}
+              savedWords={savedWords}
+              onToggleSave={toggleSave}
+            />
           </div>
         )}
 
