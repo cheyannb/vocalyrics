@@ -79,15 +79,13 @@ export default function Home() {
               >
                 Take a Quiz
               </Link>
-              {!isLoggedIn && (
-                <button
-                  onClick={() => base44.auth.redirectToLogin()}
-                  className="px-8 py-3.5 bg-accent/10 text-accent border border-accent/30 rounded-xl font-semibold text-sm hover:bg-accent/20 transition-colors flex items-center gap-2"
-                >
-                  <LogIn className="w-4 h-4" />
-                  Log In / Register
-                </button>
-              )}
+              <button
+                onClick={() => base44.auth.redirectToLogin()}
+                className="px-8 py-3.5 bg-accent/10 text-accent border border-accent/30 rounded-xl font-semibold text-sm hover:bg-accent/20 transition-colors flex items-center gap-2"
+              >
+                <LogIn className="w-4 h-4" />
+                Log In / Register
+              </button>
             </div>
           </motion.div>
 
