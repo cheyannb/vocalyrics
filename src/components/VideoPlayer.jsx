@@ -1,14 +1,53 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Play } from "lucide-react";
 
-export default function VideoPlayer({ song }) {
+export default function VideoPlayer({ song, onTimeUpdate }) {
   const [playing, setPlaying] = useState(false);
+  const playerRef = useRef(null);
+  const intervalRef = useRef(null);
+  const iframeId = `yt-player-${song.youtube_id}`;
+
+  useEffect(() => {
+    if (!playing || !onTimeUpdate) return;
+
+    // Load YouTube IFrame API if not already loaded
+    if (!window.YT) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+    }
+
+    const initPlayer = () => {
+      playerRef.current = new window.YT.Player(iframeId, {
+        events: {
+          onReady: () => {
+            intervalRef.current = setInterval(() => {
+              const t = playerRef.current?.getCurrentTime?.();
+              if (t != null) onTimeUpdate(t);
+            }, 250);
+          },
+        },
+      });
+    };
+
+    if (window.YT && window.YT.Player) {
+      initPlayer();
+    } else {
+      window.onYouTubeIframeAPIReady = initPlayer;
+    }
+
+    return () => {
+      clearInterval(intervalRef.current);
+      playerRef.current = null;
+    };
+  }, [playing]);
 
   if (playing) {
     return (
       <div className="rounded-2xl overflow-hidden border border-border mb-8 aspect-video bg-black">
         <iframe
-          src={`https://www.youtube.com/embed/${song.youtube_id}?autoplay=1&rel=0`}
+          id={iframeId}
+          src={`https://www.youtube.com/embed/${song.youtube_id}?autoplay=1&rel=0&enablejsapi=1`}
           title={song.title}
           className="w-full h-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

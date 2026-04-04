@@ -6,6 +6,7 @@ import { base44 } from "@/api/base44Client";
 import { SONG_DATA } from "../lib/songData";
 import VocabWord from "../components/VocabWord";
 import VideoPlayer from "../components/VideoPlayer";
+import SyncedLyrics from "../components/SyncedLyrics";
 import { toast } from "sonner";
 
 const difficultyColors = {
@@ -19,6 +20,7 @@ export default function SongDetail() {
   const song = SONG_DATA.find((s) => s.title === decodeURIComponent(songTitle));
   const [savedWords, setSavedWords] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentTime, setCurrentTime] = useState(0);
 
   useEffect(() => {
     loadSavedWords();
@@ -113,7 +115,15 @@ export default function SongDetail() {
         </div>
 
         {/* Video */}
-        <VideoPlayer song={song} />
+        <VideoPlayer song={song} onTimeUpdate={setCurrentTime} />
+
+        {/* Synced Lyrics */}
+        {song.lyrics_lines && song.lyrics_lines.length > 0 && (
+          <div className="mb-8">
+            <h2 className="text-lg font-bold text-foreground mb-3">Lyrics</h2>
+            <SyncedLyrics lines={song.lyrics_lines} currentTime={currentTime} />
+          </div>
+        )}
 
         {/* Vocabulary Section */}
         <div className="bg-card rounded-2xl border border-border p-6 md:p-8">
