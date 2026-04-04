@@ -1,44 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import { createPortal } from "react-dom";
-
-function Popup({ anchorRef, seg, isVocab }) {
-  const [pos, setPos] = useState(null);
-
-  useEffect(() => {
-    if (anchorRef.current) {
-      const rect = anchorRef.current.getBoundingClientRect();
-      setPos({
-        top: rect.bottom + window.scrollY + 8,
-        left: rect.left + window.scrollX + rect.width / 2,
-      });
-    }
-  }, []);
-
-  if (!pos) return null;
-
-  return createPortal(
-    <div
-      className="fixed z-[9999] w-48 bg-card border border-border rounded-xl shadow-2xl p-3 text-left -translate-x-1/2"
-      style={{ top: pos.top, left: pos.left }}
-    >
-      <div className="flex items-center gap-1.5 mb-1">
-        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${isVocab ? "bg-red-500/20 text-red-400" : "bg-blue-500/20 text-blue-400"}`}>
-          {isVocab ? "vocab" : "grammar"}
-        </span>
-        {seg.reading && (
-          <span className="font-jp text-xs text-muted-foreground">{seg.reading}</span>
-        )}
-      </div>
-      <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
-      <p className="text-xs text-muted-foreground mt-1">{seg.meaning}</p>
-    </div>,
-    document.body
-  );
-}
 
 export default function LyricLine({ segments, showFurigana, isActive, isPast }) {
-  const [popup, setPopup] = useState(null);
-  const spanRefs = useRef({});
+  const [popup, setPopup] = useState(null); // { index, rect }
   const lineRef = useRef(null);
 
   useEffect(() => {
@@ -73,24 +36,35 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast }) 
 
         return (
           <span key={i} className="relative inline-flex flex-col items-center">
+            {/* Furigana */}
             {showFurigana && seg.reading && (
               <span className="text-[9px] leading-none text-muted-foreground/70 mb-0.5 font-jp">
                 {seg.reading}
               </span>
             )}
+
             <span
-              ref={el => { if (isAnnotated) spanRefs.current[i] = el; }}
               onClick={isAnnotated ? (e) => { e.stopPropagation(); setPopup(isOpen ? null : i); } : undefined}
               className={`font-jp text-base transition-all duration-300 ${baseColor} ${underline} ${isAnnotated ? "cursor-pointer hover:opacity-80" : ""}`}
             >
               {seg.text}
             </span>
+
+            {/* Popup */}
             {isOpen && seg.meaning && (
-              <Popup
-                anchorRef={{ current: spanRefs.current[i] }}
-                seg={seg}
-                isVocab={isVocab}
-              />
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 w-48 bg-card border border-border rounded-xl shadow-2xl p-3 text-left">
+                <div className="flex items-center gap-1.5 mb-1">
+                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${isVocab ? "bg-red-500/20 text-red-400" : "bg-blue-500/20 text-blue-400"}`}>
+                    {isVocab ? "vocab" : "grammar"}
+                  </span>
+                  {seg.reading && (
+                    <span className="font-jp text-xs text-muted-foreground">{seg.reading}</span>
+                  )}
+                </div>
+                <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
+                <p className="text-xs text-muted-foreground mt-1">{seg.meaning}</p>
+                <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-0 h-0 border-l-6 border-r-6 border-b-6 border-l-transparent border-r-transparent border-b-border" />
+              </div>
             )}
           </span>
         );
