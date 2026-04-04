@@ -603,22 +603,7 @@ export const SONG_DATA = [
       { word: "支配", reading: "しはい (shihai)", meaning: "domination" },
     ]
   },
-  {
-    title: "Aishite Aishite Aishite",
-    title_jp: "愛して愛して愛して",
-    artist: "Kikuo",
-    category: "Intense & Edgy",
-    youtube_url: "https://www.youtube.com/watch?v=Oq8v0B-3ZzI",
-    youtube_id: "Oq8v0B-3ZzI",
-    difficulty: "Beginner",
-    vocabulary: [
-      { word: "愛する", reading: "あいする (aisuru)", meaning: "to love" },
-      { word: "欲しい", reading: "ほしい (hoshii)", meaning: "to want" },
-      { word: "孤独", reading: "こどく (kodoku)", meaning: "loneliness" },
-      { word: "叫ぶ", reading: "さけぶ (sakebu)", meaning: "to scream" },
-      { word: "壊す", reading: "こわす (kowasu)", meaning: "to destroy" },
-    ]
-  },
+
   {
     title: "Usseewa",
     title_jp: "うっせぇわ",
