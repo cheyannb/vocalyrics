@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { base44 } from "@/api/base44Client";
 import { SONG_DATA } from "../lib/songData";
 import VocabWord from "../components/VocabWord";
+import VideoPlayer from "../components/VideoPlayer";
 import { toast } from "sonner";
 
 const difficultyColors = {
@@ -112,15 +113,7 @@ export default function SongDetail() {
         </div>
 
         {/* Video */}
-        <div className="rounded-2xl overflow-hidden border border-border mb-8 aspect-video bg-black">
-          <iframe
-            src={`https://www.youtube-nocookie.com/embed/${song.youtube_id}?rel=0&modestbranding=1`}
-            title={song.title}
-            className="w-full h-full"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
+        <VideoPlayer song={song} />
 
         {/* Vocabulary Section */}
         <div className="bg-card rounded-2xl border border-border p-6 md:p-8">
