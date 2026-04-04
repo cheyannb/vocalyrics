@@ -49,7 +49,7 @@ export default function Home() {
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-foreground mb-4 leading-tight">
-              Voca<span className="text-primary text-glow">Learn</span>
+              Voca<span className="text-primary text-glow">Lyrics</span>
             </h1>
             <p className="font-jp text-2xl md:text-3xl text-muted-foreground mb-4">
               ボカロで日本語を学ぼう

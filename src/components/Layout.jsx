@@ -24,7 +24,7 @@ export default function Layout() {
             <Music className="w-5 h-5 text-primary" />
           </div>
           <div>
-            <h1 className="font-bold text-lg text-foreground leading-none">VocaLearn</h1>
+            <h1 className="font-bold text-lg text-foreground leading-none">VocaLyrics</h1>
             <p className="text-xs text-muted-foreground mt-0.5">ボカロで日本語</p>
           </div>
         </Link>
@@ -64,7 +64,7 @@ export default function Layout() {
             <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
               <Music className="w-4 h-4 text-primary" />
             </div>
-            <span className="font-bold text-foreground">VocaLearn</span>
+            <span className="font-bold text-foreground">VocaLyrics</span>
           </Link>
           <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2">
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
