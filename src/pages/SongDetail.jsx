@@ -120,7 +120,6 @@ export default function SongDetail() {
         {/* Synced Lyrics */}
         {song.lyrics_lines && song.lyrics_lines.length > 0 && (
           <div className="mb-8">
-            <h2 className="text-lg font-bold text-foreground mb-3">Lyrics</h2>
             <SyncedLyrics lines={song.lyrics_lines} currentTime={currentTime} />
           </div>
         )}
@@ -165,18 +164,10 @@ export default function SongDetail() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-secondary/50 border-b border-border">
-                    <th className="text-left py-3 px-4 font-medium text-muted-foreground">
-                      Word
-                    </th>
-                    <th className="text-left py-3 px-4 font-medium text-muted-foreground">
-                      Reading
-                    </th>
-                    <th className="text-left py-3 px-4 font-medium text-muted-foreground">
-                      Meaning
-                    </th>
-                    <th className="text-center py-3 px-4 font-medium text-muted-foreground w-16">
-                      Save
-                    </th>
+                    <th className="text-left py-3 px-4 font-medium text-muted-foreground">Word</th>
+                    <th className="text-left py-3 px-4 font-medium text-muted-foreground">Reading</th>
+                    <th className="text-left py-3 px-4 font-medium text-muted-foreground">Meaning</th>
+                    <th className="text-center py-3 px-4 font-medium text-muted-foreground w-16">Save</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -185,15 +176,9 @@ export default function SongDetail() {
                       key={i}
                       className="border-b border-border last:border-0 hover:bg-secondary/30 transition-colors"
                     >
-                      <td className="py-3 px-4 font-jp font-semibold text-foreground">
-                        {vocab.word}
-                      </td>
-                      <td className="py-3 px-4 text-primary text-xs">
-                        {vocab.reading}
-                      </td>
-                      <td className="py-3 px-4 text-muted-foreground">
-                        {vocab.meaning}
-                      </td>
+                      <td className="py-3 px-4 font-jp font-semibold text-foreground">{vocab.word}</td>
+                      <td className="py-3 px-4 text-primary text-xs">{vocab.reading}</td>
+                      <td className="py-3 px-4 text-muted-foreground">{vocab.meaning}</td>
                       <td className="py-3 px-4 text-center">
                         <button
                           onClick={() => toggleSave(vocab)}
