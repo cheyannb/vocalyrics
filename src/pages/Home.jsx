@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
-import { Music, Brain, Bookmark, ArrowRight, Sparkles } from "lucide-react";
+import { Music, Brain, Bookmark, ArrowRight, Sparkles, LogIn } from "lucide-react";
+import { base44 } from "@/api/base44Client";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CATEGORIES, SONG_DATA } from "../lib/songData";
 
@@ -27,6 +29,11 @@ const FeatureCard = ({ icon: Icon, title, description, to, delay }) => (
 
 export default function Home() {
   const totalWords = SONG_DATA.reduce((acc, s) => acc + (s.vocabulary?.length || 0), 0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    base44.auth.isAuthenticated().then(setIsLoggedIn);
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -72,6 +79,15 @@ export default function Home() {
               >
                 Take a Quiz
               </Link>
+              {!isLoggedIn && (
+                <button
+                  onClick={() => base44.auth.redirectToLogin()}
+                  className="px-8 py-3.5 bg-accent/10 text-accent border border-accent/30 rounded-xl font-semibold text-sm hover:bg-accent/20 transition-colors flex items-center gap-2"
+                >
+                  <LogIn className="w-4 h-4" />
+                  Log In / Register
+                </button>
+              )}
             </div>
           </motion.div>
 
