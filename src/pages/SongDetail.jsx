@@ -137,7 +137,7 @@ export default function SongDetail() {
                 Key Vocabulary
               </h2>
               <p className="text-xs text-muted-foreground mt-1">
-                Hover over a word to see its meaning. Click the bookmark to save it.
+                Click on a word to see its meaning. Click the bookmark to save it.
               </p>
             </div>
             <span className="text-xs text-muted-foreground bg-secondary px-3 py-1 rounded-full">
