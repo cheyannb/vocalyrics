@@ -1,0 +1,91 @@
+{
+  "name": "Song",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Song title"
+    },
+    "title_jp": {
+      "type": "string",
+      "description": "Japanese title"
+    },
+    "artist": {
+      "type": "string",
+      "description": "Artist/Producer"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Highest-Viewed Hits",
+        "Classic Favorites",
+        "Intense & Edgy",
+        "Fun & Catchy",
+        "Emotional & Artistic"
+      ],
+      "description": "Song category"
+    },
+    "youtube_url": {
+      "type": "string",
+      "description": "YouTube video URL"
+    },
+    "youtube_id": {
+      "type": "string",
+      "description": "YouTube video ID"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "Beginner",
+        "Intermediate",
+        "Advanced"
+      ],
+      "description": "Difficulty level for learners"
+    },
+    "lyrics_lines": {
+      "type": "array",
+      "description": "Array of lyric lines with Japanese, romaji, and English",
+      "items": {
+        "type": "object",
+        "properties": {
+          "japanese": {
+            "type": "string"
+          },
+          "romaji": {
+            "type": "string"
+          },
+          "english": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "vocabulary": {
+      "type": "array",
+      "description": "Key vocabulary words from the song",
+      "items": {
+        "type": "object",
+        "properties": {
+          "word": {
+            "type": "string"
+          },
+          "reading": {
+            "type": "string"
+          },
+          "meaning": {
+            "type": "string"
+          },
+          "example": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "youtube_url",
+    "youtube_id",
+    "category"
+  ]
+}

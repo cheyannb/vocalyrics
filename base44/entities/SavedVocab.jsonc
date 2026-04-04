@@ -1,0 +1,35 @@
+{
+  "name": "SavedVocab",
+  "type": "object",
+  "properties": {
+    "word": {
+      "type": "string",
+      "description": "Japanese word"
+    },
+    "reading": {
+      "type": "string",
+      "description": "Hiragana/Romaji reading"
+    },
+    "meaning": {
+      "type": "string",
+      "description": "English meaning"
+    },
+    "song_title": {
+      "type": "string",
+      "description": "Song this word came from"
+    },
+    "song_id": {
+      "type": "string",
+      "description": "Reference to song entity"
+    },
+    "mastery_level": {
+      "type": "number",
+      "description": "0-5 mastery level",
+      "default": 0
+    }
+  },
+  "required": [
+    "word",
+    "meaning"
+  ]
+}
