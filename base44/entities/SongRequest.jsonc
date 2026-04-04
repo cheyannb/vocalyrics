@@ -1,0 +1,37 @@
+{
+  "name": "SongRequest",
+  "type": "object",
+  "properties": {
+    "song_title": {
+      "type": "string",
+      "description": "Title of the requested song"
+    },
+    "artist": {
+      "type": "string",
+      "description": "Artist or producer name"
+    },
+    "youtube_url": {
+      "type": "string",
+      "description": "YouTube link to the song (optional)"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes or reason for the request"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Pending",
+        "In Progress",
+        "Added",
+        "Declined"
+      ],
+      "default": "Pending",
+      "description": "Status of the request"
+    }
+  },
+  "required": [
+    "song_title",
+    "artist"
+  ]
+}
