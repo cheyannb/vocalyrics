@@ -787,8 +787,8 @@ export const SONG_DATA = [
     title_jp: "Odds&Ends",
     artist: "ryo (supercell)",
     category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=iOFZKwv_LfA",
-    youtube_id: "iOFZKwv_LfA",
+    youtube_url: "https://www.youtube.com/watch?v=dGNoCICGmo0",
+    youtube_id: "dGNoCICGmo0",
     difficulty: "Intermediate",
     vocabulary: [
       { word: "歌", reading: "うた (uta)", meaning: "song" },
