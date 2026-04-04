@@ -21,7 +21,7 @@ export const SONG_DATA = [
   {
     title: "Young Girl A",
     title_jp: "少女A",
-    artist: "Mikito-P",
+    artist: "Siinamota",
     category: "Highest-Viewed Hits",
     youtube_url: "https://www.youtube.com/watch?v=AqI97zHMoQw",
     youtube_id: "AqI97zHMoQw",
