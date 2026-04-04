@@ -21,7 +21,10 @@ export default function SyncedLyrics({ lines, currentTime, savedWords, onToggleS
     <div>
       {/* Toggle */}
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-lg font-bold text-foreground">Lyrics</h2>
+        <div>
+          <h2 className="text-lg font-bold text-foreground">Lyrics</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">Click on a word to reveal its meaning.</p>
+        </div>
         <div className="flex items-center gap-4 text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
             <span className="w-3 h-0.5 bg-red-400 rounded inline-block" /> vocab
