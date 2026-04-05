@@ -277,166 +277,178 @@ export const SONG_DATA = [
     youtube_url: "https://www.youtube.com/watch?v=NTrm_idbhUk",
     youtube_id: "NTrm_idbhUk",
     difficulty: "Beginner",
+    context: "A child is born with a cursed collar (首輪) that compels them to desperately seek human affection. The song follows their obsessive need to be loved — performing as the 'perfect child' at school, confessing to someone, and ultimately clinging to anyone who will stay. The cheerful, childlike melody contrasts with deeply dark themes of loneliness and emotional suffocation.",
     lyrics_lines: [
-      { time: 21.73, japanese: "はるか遠い 遠い 昔巻かれた首輪", segments: [
-        { text: "はるか遠い", reading: "はるかとおい", type: "vocab", meaning: "far away (haruka tooi)" },
+      // ── VERSE 1: The Curse ──
+      { time: 21.73, japanese: "はるか遠い 遠い 昔巻かれた首輪", context: "The curse is ancient — they were born with this need.", segments: [
+        { text: "はるか遠い", reading: "はるかとおい", type: "vocab", meaning: "far away, long ago (haruka tooi) — sets the curse as ancient, pre-existing" },
         { text: " 遠い " },
-        { text: "昔", reading: "むかし", type: "vocab", meaning: "long ago (mukashi)" },
-        { text: "巻かれた", reading: "まかれた", type: "grammar", meaning: "passive past: was wrapped (巻く → 巻かれた)" },
-        { text: "首輪", reading: "くびわ", type: "vocab", meaning: "collar/neck ring (kubiwa)" },
+        { text: "昔", reading: "むかし", type: "vocab", meaning: "long ago (mukashi) — the curse predates the child's memory" },
+        { text: "巻かれた", reading: "まかれた", type: "grammar", meaning: "passive past: was wrapped around — 巻く (to wrap) → 巻かれた. The child had no choice." },
+        { text: "首輪", reading: "くびわ", type: "vocab", meaning: "collar/neck ring (kubiwa) — the central metaphor: a literal curse around the neck" },
       ]},
-      { time: 27.99, japanese: "人が欲しい 人が欲しい と叫ぶ呪いの首輪", segments: [
-        { text: "人", reading: "ひと", type: "vocab", meaning: "person (hito)" },
+      { time: 27.99, japanese: "人が欲しい 人が欲しい と叫ぶ呪いの首輪", context: "The collar itself screams the child's need — it's involuntary, uncontrollable.", segments: [
+        { text: "人", reading: "ひと", type: "vocab", meaning: "person (hito) — the child doesn't want anything except human presence" },
         { text: "が", type: "grammar", meaning: "subject marker particle" },
-        { text: "欲しい", reading: "ほしい", type: "vocab", meaning: "want/desire (hoshii)" },
+        { text: "欲しい", reading: "ほしい", type: "vocab", meaning: "want/desire (hoshii) — a raw, simple need" },
         { text: " 人が欲しい と" },
-        { text: "叫ぶ", reading: "さけぶ", type: "vocab", meaning: "to scream/shout (sakebu)" },
-        { text: "呪い", reading: "のろい", type: "vocab", meaning: "curse (noroi)" },
+        { text: "叫ぶ", reading: "さけぶ", type: "vocab", meaning: "to scream/shout (sakebu) — the collar doesn't whisper, it screams" },
+        { text: "呪い", reading: "のろい", type: "vocab", meaning: "curse (noroi) — confirms this need is a supernatural affliction, not a choice" },
         { text: "の", type: "grammar", meaning: "possessive/linking particle" },
-        { text: "首輪", reading: "くびわ", type: "vocab", meaning: "collar/neck ring (kubiwa)" },
+        { text: "首輪", reading: "くびわ", type: "vocab", meaning: "collar (kubiwa) — repeated for emphasis" },
       ]},
-      { time: 34.32, japanese: "怒らないで 見捨てないで どこもいかないで（ねえ）", segments: [
-        { text: "怒らないで", reading: "おこらないで", type: "grammar", meaning: "please don't get angry (negative te-form request)" },
+      // ── PRE-CHORUS: Desperate Pleading ──
+      { time: 34.32, japanese: "怒らないで 見捨てないで どこもいかないで（ねえ）", context: "The child begs people not to leave. Three parallel pleas — the pattern shows how familiar abandonment is.", segments: [
+        { text: "怒らないで", reading: "おこらないで", type: "grammar", meaning: "please don't get angry (negative te-form request) — the child fears anger will drive people away" },
         { text: " " },
-        { text: "見捨てないで", reading: "みすてないで", type: "grammar", meaning: "please don't abandon me (negative te-form request)" },
+        { text: "見捨てないで", reading: "みすてないで", type: "grammar", meaning: "please don't abandon me (negative te-form request) — みすてる = to abandon" },
         { text: " " },
-        { text: "どこもいかないで", type: "grammar", meaning: "please don't go anywhere (negative te-form request)" },
-        { text: "（ねえ）" },
+        { text: "どこもいかないで", type: "grammar", meaning: "please don't go anywhere (negative te-form request) — どこも = anywhere" },
+        { text: "（ねえ）", type: "grammar", meaning: "ねえ — soft plea, like 'okay?' Childlike and heartbreaking." },
       ]},
-      { time: 40.42, japanese: "強く絞める 吐くまで絞める 人がいないいないと", segments: [
-        { text: "強く", reading: "つよく", type: "vocab", meaning: "strongly (tsuyoku)" },
-        { text: "絞める", reading: "しめる", type: "vocab", meaning: "to strangle/tighten (shimeru)" },
+      { time: 40.42, japanese: "強く絞める 吐くまで絞める 人がいないいないと", context: "The collar physically tightens when no one is around — the need for people becomes physically painful.", segments: [
+        { text: "強く", reading: "つよく", type: "vocab", meaning: "strongly (tsuyoku) — the physical grip of the curse" },
+        { text: "絞める", reading: "しめる", type: "vocab", meaning: "to strangle/tighten (shimeru) — the collar constricts" },
         { text: " " },
-        { text: "吐くまで", reading: "はくまで", type: "grammar", meaning: "until vomiting — まで = until" },
+        { text: "吐くまで", reading: "はくまで", type: "grammar", meaning: "until vomiting — まで = until. The pain is visceral and extreme." },
         { text: "絞める" },
-        { text: " 人がいないいないと" },
+        { text: " 人がいないいないと", type: "vocab", meaning: "because there's no one here — the collar tightens precisely when the child is alone" },
       ]},
-      { time: 46.56, japanese: "いい成績でしょ", segments: [
+      // ── VERSE 2: Performance of the 'Good Child' ──
+      { time: 46.56, japanese: "いい成績でしょ", context: "The child shows off achievements to earn love — performance as a substitute for genuine connection.", segments: [
         { text: "いい", type: "vocab", meaning: "good (ii)" },
-        { text: "成績", reading: "せいせき", type: "vocab", meaning: "grades/results (seiseki)" },
-        { text: "でしょ", type: "grammar", meaning: "right? / isn't it? (seeking agreement)" },
+        { text: "成績", reading: "せいせき", type: "vocab", meaning: "grades/results (seiseki) — academic achievement as a bid for approval" },
+        { text: "でしょ", type: "grammar", meaning: "right? / isn't it? — seeking validation, not stating fact" },
       ]},
-      { time: 49.68, japanese: "ねえ ねえ いい子でしょ", segments: [
-        { text: "ねえ ねえ " },
+      { time: 49.68, japanese: "ねえ ねえ いい子でしょ", context: "The child keeps asking, needing confirmation. Repeating ねえ shows growing anxiety.", segments: [
+        { text: "ねえ ねえ ", type: "vocab", meaning: "hey, hey — childlike attention-seeking, slightly desperate" },
         { text: "いい", type: "vocab", meaning: "good (ii)" },
-        { text: "子", reading: "こ", type: "vocab", meaning: "child (ko)" },
-        { text: "でしょ", type: "grammar", meaning: "right? / isn't it? (seeking agreement)" },
+        { text: "子", reading: "こ", type: "vocab", meaning: "child (ko) — the child defines their worth by being 'good'" },
+        { text: "でしょ", type: "grammar", meaning: "right? — seeking agreement and validation" },
       ]},
-      { time: 53.08, japanese: "かわいい子でしょ", segments: [
-        { text: "かわいい", reading: "かわいい", type: "vocab", meaning: "cute (kawaii)" },
+      { time: 53.08, japanese: "かわいい子でしょ", context: "Not just good — but cute too. The child offers every possible quality to be loved.", segments: [
+        { text: "かわいい", reading: "かわいい", type: "vocab", meaning: "cute (kawaii) — physical appeal added to the performance" },
         { text: "子", reading: "こ", type: "vocab", meaning: "child (ko)" },
-        { text: "でしょ", type: "grammar", meaning: "right? / isn't it? (seeking agreement)" },
+        { text: "でしょ", type: "grammar", meaning: "right? — still asking, still uncertain" },
       ]},
-      { time: 55.93, japanese: "ねえ ねえ 良い子でしょう 苦しい ねえ", segments: [
+      { time: 55.93, japanese: "ねえ ねえ 良い子でしょう 苦しい ねえ", context: "The mask slips — 苦しい (painful) breaks through mid-performance. The child is suffering while smiling.", segments: [
         { text: "ねえ ねえ " },
-        { text: "良い", reading: "よい", type: "vocab", meaning: "good (yoi)" },
+        { text: "良い", reading: "よい", type: "vocab", meaning: "good (yoi) — formal version of いい, as if putting on a proper presentation" },
         { text: "子", reading: "こ", type: "vocab", meaning: "child (ko)" },
-        { text: "でしょう", type: "grammar", meaning: "right? / probably (seeking agreement)" },
+        { text: "でしょう", type: "grammar", meaning: "right? / probably — formal seeking of agreement" },
         { text: " " },
-        { text: "苦しい", reading: "くるしい", type: "vocab", meaning: "painful/agonizing (kurushii)" },
+        { text: "苦しい", reading: "くるしい", type: "vocab", meaning: "painful/agonizing (kurushii) — raw emotion breaks through the performance" },
         { text: " ねえ" },
       ]},
-      { time: 62.45, japanese: "愛して 愛して 愛して もっともっと", segments: [
-        { text: "愛して", reading: "あいして", type: "vocab", meaning: "love me — te-form of 愛する (aisuru)" },
+      // ── CHORUS 1 ──
+      { time: 62.45, japanese: "愛して 愛して 愛して もっともっと", context: "The core plea of the song — simple, childlike repetition that becomes overwhelming.", segments: [
+        { text: "愛して", reading: "あいして", type: "vocab", meaning: "love me — te-form of 愛する (to love). A command and a plea at once." },
         { text: " 愛して 愛して " },
-        { text: "もっともっと", type: "vocab", meaning: "more and more (motto motto)" },
+        { text: "もっともっと", type: "vocab", meaning: "more and more (motto motto) — the need is never satisfied" },
       ]},
-      { time: 68.68, japanese: "愛して 愛して 狂おしいほどに", segments: [
+      { time: 68.68, japanese: "愛して 愛して 狂おしいほどに", context: "The love requested isn't gentle — it must be maddeningly intense.", segments: [
         { text: "愛して", reading: "あいして", type: "vocab", meaning: "love me (aishite)" },
         { text: " 愛して " },
-        { text: "狂おしい", reading: "くるおしい", type: "vocab", meaning: "maddeningly/passionately (kuru-oshii)" },
-        { text: "ほどに", type: "grammar", meaning: "to the extent of — ほど = degree/extent + に" },
+        { text: "狂おしい", reading: "くるおしい", type: "vocab", meaning: "maddeningly/to a degree of madness (kuruo-shii) — the love must be obsessive" },
+        { text: "ほどに", type: "grammar", meaning: "to the extent of — ほど = degree/extent + に. The love must reach the point of madness." },
       ]},
-      { time: 75.00, japanese: "苦しい 苦しい 呪縛を 解いて解いて ねえ", segments: [
-        { text: "苦しい", reading: "くるしい", type: "vocab", meaning: "painful/agonizing (kurushii)" },
+      { time: 75.00, japanese: "苦しい 苦しい 呪縛を 解いて解いて ねえ", context: "The child acknowledges the curse binding them and begs to be freed — but the freedom they want is simply to be loved.", segments: [
+        { text: "苦しい", reading: "くるしい", type: "vocab", meaning: "painful/agonizing (kurushii) — the collar is physically and emotionally crushing" },
         { text: " 苦しい " },
-        { text: "呪縛", reading: "じゅばく", type: "vocab", meaning: "curse/binding spell (jubaku)" },
+        { text: "呪縛", reading: "じゅばく", type: "vocab", meaning: "binding curse/spell (jubaku) — stronger than 呪い, implies being physically bound" },
         { text: "を", type: "grammar", meaning: "object marker particle" },
         { text: " " },
-        { text: "解いて", reading: "といて", type: "grammar", meaning: "te-form: releasing/undoing, requesting continuation" },
+        { text: "解いて", reading: "といて", type: "grammar", meaning: "please undo/release — te-form used as a soft request" },
         { text: "解いて ねえ" },
       ]},
-      { time: 84.40, japanese: "止められない ah", segments: [
-        { text: "止められない", reading: "とめられない", type: "grammar", meaning: "can't stop — passive potential negative (止める→止められない)" },
+      // ── BREAKDOWN ──
+      { time: 84.40, japanese: "止められない ah", context: "The curse, the need, the obsession — none of it can be stopped.", segments: [
+        { text: "止められない", reading: "とめられない", type: "grammar", meaning: "can't stop — potential passive negative of 止める (to stop). Even the child can't control themselves." },
         { text: " ah" },
       ]},
       { time: 105.84, japanese: "Ah-ah" },
-      { time: 118.83, japanese: "身体 身体 大きくなっても小さい首輪", segments: [
-        { text: "身体", reading: "からだ", type: "vocab", meaning: "body (karada)" },
+      // ── VERSE 2: Growing Up, But The Curse Remains ──
+      { time: 118.83, japanese: "身体 身体 大きくなっても小さい首輪", context: "The child grows up but the curse doesn't grow with them — it tightens with age.", segments: [
+        { text: "身体", reading: "からだ", type: "vocab", meaning: "body (karada) — the physical self is growing" },
         { text: " 身体 " },
-        { text: "大きくなっても", reading: "おおきくなっても", type: "grammar", meaning: "even if it grows bigger — ても = even if" },
-        { text: "小さい", reading: "ちいさい", type: "vocab", meaning: "small (chiisai)" },
-        { text: "首輪", reading: "くびわ", type: "vocab", meaning: "collar/neck ring (kubiwa)" },
+        { text: "大きくなっても", reading: "おおきくなっても", type: "grammar", meaning: "even though/even if it grows bigger — ても = even if. Contrast: body grows, collar doesn't." },
+        { text: "小さい", reading: "ちいさい", type: "vocab", meaning: "small (chiisai) — the collar is still child-sized, now choking an older person" },
+        { text: "首輪", reading: "くびわ", type: "vocab", meaning: "collar (kubiwa) — the metaphor sharpens: an adult still trapped in a child's curse" },
       ]},
-      { time: 124.97, japanese: "苦しくなる 足りなくなる 人が 人が足りない", segments: [
-        { text: "苦しくなる", reading: "くるしくなる", type: "grammar", meaning: "to become painful — く-form + なる" },
+      { time: 124.97, japanese: "苦しくなる 足りなくなる 人が 人が足りない", context: "The older the child gets, the more people they need. The curse escalates.", segments: [
+        { text: "苦しくなる", reading: "くるしくなる", type: "grammar", meaning: "to become painful — く-adjective + なる = to become. Growing up makes the pain grow." },
         { text: " " },
-        { text: "足りなくなる", reading: "たりなくなる", type: "grammar", meaning: "to become insufficient — く-form + なる" },
+        { text: "足りなくなる", reading: "たりなくなる", type: "grammar", meaning: "to become insufficient — the amount of human contact needed keeps growing" },
         { text: " 人が 人が" },
-        { text: "足りない", reading: "たりない", type: "vocab", meaning: "not enough/insufficient (tarinai)" },
+        { text: "足りない", reading: "たりない", type: "vocab", meaning: "not enough/insufficient (tarinai) — people aren't enough. There is never enough." },
       ]},
-      { time: 131.34, japanese: "クラスの誰にも負けない キレイないい子でしょう（ねえ）", segments: [
-        { text: "クラス", type: "vocab", meaning: "class (kurasu)" },
+      // ── VERSE 3: Competition for Attention ──
+      { time: 131.34, japanese: "クラスの誰にも負けない キレイないい子でしょう（ねえ）", context: "At school, the child competes to be the best — not out of ambition, but to be noticed and loved.", segments: [
+        { text: "クラス", type: "vocab", meaning: "class (kurasu) — the school setting: love must be competed for" },
         { text: "の", type: "grammar", meaning: "possessive particle" },
-        { text: "誰にも", reading: "だれにも", type: "grammar", meaning: "to anyone — に + も = even/also" },
-        { text: "負けない", reading: "まけない", type: "vocab", meaning: "won't lose (makenai)" },
+        { text: "誰にも", reading: "だれにも", type: "grammar", meaning: "to anyone — に + も = compared to anyone" },
+        { text: "負けない", reading: "まけない", type: "vocab", meaning: "won't lose (makenai) — competitive desperation" },
         { text: " " },
-        { text: "キレイな", type: "vocab", meaning: "pretty/neat (kirei na)" },
-        { text: "いい子", type: "vocab", meaning: "good child (ii ko)" },
-        { text: "でしょう（ねえ）", type: "grammar", meaning: "right? / isn't it?" },
+        { text: "キレイな", type: "vocab", meaning: "pretty/neat (kirei na) — appearance as a tool for being loved" },
+        { text: "いい子", type: "vocab", meaning: "good child (ii ko) — the performance continues into adolescence" },
+        { text: "でしょう（ねえ）", type: "grammar", meaning: "right? — still seeking validation, still uncertain" },
       ]},
-      { time: 137.51, japanese: "あの子よりも どの子よりも 誰も 彼も 私を見てよ", segments: [
-        { text: "あの子", type: "vocab", meaning: "that child (ano ko)" },
-        { text: "よりも", type: "grammar", meaning: "more than — より + も" },
+      { time: 137.51, japanese: "あの子よりも どの子よりも 誰も 彼も 私を見てよ", context: "The child wants to be seen more than anyone else — desperately competing for every person's gaze.", segments: [
+        { text: "あの子", type: "vocab", meaning: "that child (ano ko) — a specific rival" },
+        { text: "よりも", type: "grammar", meaning: "more than — より + も for emphasis" },
         { text: " どの子" },
-        { text: "よりも", type: "grammar", meaning: "more than — より + も" },
-        { text: " 誰も 彼も " },
-        { text: "私", reading: "わたし", type: "vocab", meaning: "I/me (watashi)" },
+        { text: "よりも", type: "grammar", meaning: "more than (any child) — widening the comparison" },
+        { text: " 誰も 彼も ", type: "vocab", meaning: "everyone, every single person — 誰も彼も = everybody without exception" },
+        { text: "私", reading: "わたし", type: "vocab", meaning: "I/me (watashi) — notably switches to 私, more assertive than expected for a child" },
         { text: "を", type: "grammar", meaning: "object marker particle" },
-        { text: "見てよ", reading: "みてよ", type: "vocab", meaning: "look at me (mite yo)" },
+        { text: "見てよ", reading: "みてよ", type: "vocab", meaning: "look at me! (mite yo) — よ adds forcefulness. A demand, not a request." },
       ]},
-      { time: 143.84, japanese: "体育館裏 あなたに告白を", segments: [
-        { text: "体育館裏", reading: "たいいくかんうら", type: "vocab", meaning: "behind the gym (taiikukan ura)" },
+      // ── CONFESSION ──
+      { time: 143.84, japanese: "体育館裏 あなたに告白を", context: "The classic Japanese school confession spot — behind the gym. The child channels their need into romantic love.", segments: [
+        { text: "体育館裏", reading: "たいいくかんうら", type: "vocab", meaning: "behind the gym (taiikukan ura) — a culturally iconic spot in Japan for romantic confessions" },
         { text: " " },
         { text: "あなたに", type: "grammar", meaning: "to you — に = direction/indirect object particle" },
-        { text: "告白", reading: "こくはく", type: "vocab", meaning: "confession of love (kokuhaku)" },
+        { text: "告白", reading: "こくはく", type: "vocab", meaning: "confession of love (kokuhaku) — the child confesses romantic feelings" },
         { text: "を", type: "grammar", meaning: "object marker particle" },
       ]},
-      { time: 150.10, japanese: "嘘みたいでしょ", segments: [
-        { text: "嘘", reading: "うそ", type: "vocab", meaning: "lie (uso)" },
-        { text: "みたい", type: "grammar", meaning: "seems like — みたい = seems like/similar to" },
-        { text: "でしょ", type: "grammar", meaning: "right? (seeking agreement)" },
+      { time: 150.10, japanese: "嘘みたいでしょ", context: "Even the child can't believe they're doing this — but the curse pushes them forward.", segments: [
+        { text: "嘘", reading: "うそ", type: "vocab", meaning: "lie (uso) — as if it can't be real" },
+        { text: "みたい", type: "grammar", meaning: "seems like — みたい = seems like/similar to. 'It seems like a lie, right?'" },
+        { text: "でしょ", type: "grammar", meaning: "right? — seeking the other person's agreement with their own disbelief" },
       ]},
-      { time: 152.95, japanese: "あなたが好きなの 汚いあなたが", segments: [
+      { time: 152.95, japanese: "あなたが好きなの 汚いあなたが", context: "The shocking twist — the child loves this person despite (or because of) their flaws. The curse is indiscriminate.", segments: [
         { text: "あなた", type: "vocab", meaning: "you (anata)" },
-        { text: "が", type: "grammar", meaning: "subject marker particle" },
-        { text: "好きなの", reading: "すきなの", type: "grammar", meaning: "I like you — の = explanatory/emotional emphasis" },
+        { text: "が", type: "grammar", meaning: "subject marker — emphasizes 'YOU specifically'" },
+        { text: "好きなの", reading: "すきなの", type: "grammar", meaning: "I like you — の = explanatory/emotional emphasis. Vulnerable admission." },
         { text: " " },
-        { text: "汚い", reading: "きたない", type: "vocab", meaning: "dirty/filthy (kitanai)" },
+        { text: "汚い", reading: "きたない", type: "vocab", meaning: "dirty/filthy (kitanai) — the person isn't perfect; the child loves them anyway. The curse doesn't care about worth." },
         { text: "あなたが" },
       ]},
-      { time: 159.49, japanese: "愛して 愛して 愛して 全部あげる", segments: [
+      // ── CHORUS 2: Total Surrender ──
+      { time: 159.49, japanese: "愛して 愛して 愛して 全部あげる", context: "The child offers everything in exchange for love — a desperate, total surrender.", segments: [
         { text: "愛して", reading: "あいして", type: "vocab", meaning: "love me (aishite)" },
         { text: " 愛して 愛して " },
-        { text: "全部", reading: "ぜんぶ", type: "vocab", meaning: "everything/all (zenbu)" },
-        { text: "あげる", type: "vocab", meaning: "I'll give (ageru)" },
+        { text: "全部", reading: "ぜんぶ", type: "vocab", meaning: "everything/all (zenbu) — every part of themselves is on the table" },
+        { text: "あげる", type: "vocab", meaning: "I'll give (ageru) — the child offers themselves completely" },
       ]},
-      { time: 165.75, japanese: "あなたに あなたに 全部背負ってもらうよ", segments: [
-        { text: "あなたに", type: "grammar", meaning: "to you — に = direction particle" },
+      { time: 165.75, japanese: "あなたに あなたに 全部背負ってもらうよ", context: "The child wants the other person to carry all their pain — the burden of the curse is passed onto the beloved.", segments: [
+        { text: "あなたに", type: "grammar", meaning: "to you (anata ni) — direction particle, you specifically" },
         { text: " あなたに " },
-        { text: "全部", reading: "ぜんぶ", type: "vocab", meaning: "everything (zenbu)" },
-        { text: "背負ってもらうよ", reading: "せおってもらうよ", type: "grammar", meaning: "I'll have you carry it all — てもらう = to have someone do something" },
+        { text: "全部", reading: "ぜんぶ", type: "vocab", meaning: "everything (zenbu) — the full weight of their need" },
+        { text: "背負ってもらうよ", reading: "せおってもらうよ", type: "grammar", meaning: "I'll have you carry it all — てもらう = to have/receive someone doing something for you. The child demands the person bear their burden." },
       ]},
-      { time: 172.02, japanese: "足りない あなたが 足りない 離さないよ ah-ah", segments: [
-        { text: "足りない", reading: "たりない", type: "vocab", meaning: "not enough (tarinai)" },
+      { time: 172.02, japanese: "足りない あなたが 足りない 離さないよ ah-ah", context: "Even this person isn't enough — and yet the child refuses to let go. The curse is unquenchable.", segments: [
+        { text: "足りない", reading: "たりない", type: "vocab", meaning: "not enough (tarinai) — even this person, even total love, is never sufficient" },
         { text: " あなたが 足りない " },
-        { text: "離さないよ", reading: "はなさないよ", type: "vocab", meaning: "won't let go (hanasanai yo)" },
+        { text: "離さないよ", reading: "はなさないよ", type: "vocab", meaning: "won't let go (hanasanai yo) — possessive, clinging. A threat wrapped in need." },
         { text: " ah-ah" },
       ]},
-      { time: 181.43, japanese: "ごめんなさい", segments: [
-        { text: "ごめんなさい", type: "vocab", meaning: "I'm sorry (gomen nasai)" },
+      // ── APOLOGY ──
+      { time: 181.43, japanese: "ごめんなさい", context: "A single, soft apology. The child knows they are too much — but cannot stop.", segments: [
+        { text: "ごめんなさい", type: "vocab", meaning: "I'm sorry (gomen nasai) — the child is aware their love is suffocating. The most heartbreaking line." },
       ]},
-      { time: 184.52, japanese: "愛して 愛して 愛して もっともっと", segments: [
+      // ── FINAL CHORUS ──
+      { time: 184.52, japanese: "愛して 愛して 愛して もっともっと", context: "Despite the apology, the plea resumes immediately — the curse overrides remorse.", segments: [
         { text: "愛して", reading: "あいして", type: "vocab", meaning: "love me (aishite)" },
         { text: " 愛して 愛して " },
         { text: "もっともっと", type: "vocab", meaning: "more and more (motto motto)" },
@@ -444,23 +456,24 @@ export const SONG_DATA = [
       { time: 190.79, japanese: "愛して 愛して 狂おしいほどに", segments: [
         { text: "愛して", reading: "あいして", type: "vocab", meaning: "love me (aishite)" },
         { text: " 愛して " },
-        { text: "狂おしい", reading: "くるおしい", type: "vocab", meaning: "maddeningly/passionately (kuru-oshii)" },
-        { text: "ほどに", type: "grammar", meaning: "to the extent of — ほど = degree + に" },
+        { text: "狂おしい", reading: "くるおしい", type: "vocab", meaning: "maddeningly (kuruo-shii) — the need for mad, consuming love" },
+        { text: "ほどに", type: "grammar", meaning: "to the extent of — to a degree of madness" },
       ]},
-      { time: 197.03, japanese: "苦しい 離さない 苦しい もっともっと ねえ", segments: [
-        { text: "苦しい", reading: "くるしい", type: "vocab", meaning: "painful (kurushii)" },
+      { time: 197.03, japanese: "苦しい 離さない 苦しい もっともっと ねえ", context: "Pain and refusal to release — the two drives coexist. The child won't let go even as it hurts them.", segments: [
+        { text: "苦しい", reading: "くるしい", type: "vocab", meaning: "painful (kurushii) — the curse hurts" },
         { text: " " },
-        { text: "離さない", reading: "はなさない", type: "vocab", meaning: "won't let go (hanasanai)" },
+        { text: "離さない", reading: "はなさない", type: "vocab", meaning: "won't let go (hanasanai) — possessive grip" },
         { text: " 苦しい " },
-        { text: "もっともっと", type: "vocab", meaning: "more and more (motto motto)" },
+        { text: "もっともっと", type: "vocab", meaning: "more and more (motto motto) — even more, despite the pain" },
         { text: " ねえ" },
       ]},
-      { time: 206.49, japanese: "幸せなの ah, ah", segments: [
-        { text: "幸せなの", reading: "しあわせなの", type: "grammar", meaning: "I'm happy — の = explanatory/emotional emphasis" },
+      // ── ENDING ──
+      { time: 206.49, japanese: "幸せなの ah, ah", context: "The haunting ending — the child claims to be happy. Whether this is genuine or delusion is left ambiguous.", segments: [
+        { text: "幸せなの", reading: "しあわせなの", type: "grammar", meaning: "I'm happy — の = explanatory/emotional emphasis. Said softly, after all the pain. Bittersweet or tragic." },
         { text: " ah, ah" },
       ]},
-      { time: 231.49, japanese: "幸せなの ah", segments: [
-        { text: "幸せなの", reading: "しあわせなの", type: "grammar", meaning: "I'm happy — の = explanatory/emotional emphasis" },
+      { time: 231.49, japanese: "幸せなの ah", context: "Repeated at the very end — fading out on the question of whether this happiness is real.", segments: [
+        { text: "幸せなの", reading: "しあわせなの", type: "grammar", meaning: "I'm happy — the final word of the song. Is it peace, or is it still the curse speaking?" },
         { text: " ah" },
       ]},
     ],
