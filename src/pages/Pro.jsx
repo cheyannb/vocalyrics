@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Crown, Check, Loader2, Sparkles, Star, Zap, Settings } from "lucide-react";
+import { Crown, Check, Loader2, Sparkles, Settings } from "lucide-react";
 import { base44 } from "@/api/base44Client";
-import {
-  configureRevenueCat,
-  checkIsProUser,
-  getOfferings,
-  purchasePackage,
-  manageSubscription,
-  getCustomerInfo,
-} from "../lib/revenueCat";
 import { toast } from "sonner";
 
 const PRODUCT_META = {
@@ -98,6 +90,9 @@ export default function Pro() {
 
   useEffect(() => {
     async function init() {
+      const { configureRevenueCat, checkIsProUser, getOfferings, getCustomerInfo } =
+        await import("../lib/revenueCat");
+
       const me = await base44.auth.me();
       setUser(me);
       configureRevenueCat(me?.id || me?.email);
@@ -112,7 +107,6 @@ export default function Pro() {
       setCustomerInfo(info);
 
       const pkgs = offerings?.current?.availablePackages || [];
-      // Sort: lifetime → yearly → monthly
       const order = ["lifetime", "yearly", "monthly"];
       pkgs.sort((a, b) => order.indexOf(a.identifier) - order.indexOf(b.identifier));
       setPackages(pkgs);
@@ -124,15 +118,14 @@ export default function Pro() {
   const handlePurchase = async (pkg) => {
     setPurchasing(true);
     try {
+      const { purchasePackage, getCustomerInfo } = await import("../lib/revenueCat");
       await purchasePackage(pkg, user?.email);
       const info = await getCustomerInfo();
       setCustomerInfo(info);
       setIsPro(true);
       toast("🎉 Welcome to Vocalyrics Pro!");
     } catch (err) {
-      if (err?.userCancelled) {
-        // user closed checkout, no toast needed
-      } else {
+      if (!err?.userCancelled) {
         toast.error("Purchase failed. Please try again.");
       }
     } finally {
@@ -142,6 +135,7 @@ export default function Pro() {
 
   const handleManage = async () => {
     try {
+      const { manageSubscription } = await import("../lib/revenueCat");
       await manageSubscription();
     } catch {
       toast.error("Could not open subscription management.");
