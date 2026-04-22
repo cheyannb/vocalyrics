@@ -1,4 +1,5 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
+
 import { Music, BookOpen, Brain, Bookmark, Home, Menu, X, GraduationCap, MessageSquarePlus } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -107,8 +108,17 @@ export default function Layout() {
       </AnimatePresence>
 
       {/* Main Content */}
-      <main className="flex-1 md:ml-64 pt-14 md:pt-0 min-h-screen">
-        <Outlet />
+      <main className="flex-1 md:ml-64 pt-14 md:pt-0 min-h-screen flex flex-col">
+        <div className="flex-1">
+          <Outlet />
+        </div>
+        <footer className="border-t border-border py-4 px-6 text-center text-xs text-muted-foreground md:ml-0">
+          <Link to="/privacy-policy" className="hover:text-primary transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="mx-2">·</span>
+          <span>© {new Date().getFullYear()} VocaLyrics</span>
+        </footer>
       </main>
     </div>
   );
