@@ -1,6 +1,6 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 
-import { Music, BookOpen, Brain, Bookmark, Home, Menu, X, GraduationCap, MessageSquarePlus, Sparkles } from "lucide-react";
+import { Music, BookOpen, Brain, Bookmark, Home, Menu, X, GraduationCap, MessageSquarePlus } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,7 +11,6 @@ const navItems = [
   { path: "/quiz", label: "Quiz", icon: Brain },
   { path: "/study", label: "Study", icon: GraduationCap },
   { path: "/request", label: "Request", icon: MessageSquarePlus },
-  { path: "/pro", label: "Go Pro ✨", icon: Sparkles },
 ];
 
 export default function Layout() {
