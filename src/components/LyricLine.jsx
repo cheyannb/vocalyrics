@@ -61,7 +61,7 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
 
             {/* Popup */}
             {isOpen && seg.meaning && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 z-50 w-48 bg-card border border-border rounded-xl shadow-2xl p-3 text-left">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-[100] w-48 bg-card border border-border rounded-xl shadow-2xl p-3 text-left">
                 <div className="flex items-center gap-1.5 mb-1">
                   <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${isVocab ? "bg-red-500/20 text-red-400" : "bg-blue-500/20 text-blue-400"}`}>
                     {isVocab ? "vocab" : "grammar"}
@@ -97,7 +97,7 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
                   )}
                 </div>
                 <p className="text-xs text-muted-foreground">{seg.meaning}</p>
-                <div className="absolute left-1/2 -translate-x-1/2 bottom-full w-0 h-0 border-l-6 border-r-6 border-b-6 border-l-transparent border-r-transparent border-b-border" />
+                <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-6 border-r-6 border-t-6 border-l-transparent border-r-transparent border-t-border" />
               </div>
             )}
           </span>
