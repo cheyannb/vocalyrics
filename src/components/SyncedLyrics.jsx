@@ -45,7 +45,6 @@ export default function SyncedLyrics({ lines, currentTime, savedWords, onToggleS
 
       <div
         ref={containerRef}
-        style={{ overflowX: "visible" }}
         className="h-72 overflow-y-auto space-y-4 px-4 py-6 rounded-xl bg-secondary/30 border border-border"
       >
         {lines.map((line, i) => {
