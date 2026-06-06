@@ -13,7 +13,9 @@ export const SONG_DATA = [
     lyrics_lines: [
       // ── INTRO ──
       { time: 1.37, japanese: "ワン ツー", segments: [
-        { text: "ワン ツー", meaning: "One, two — a count-in before the song begins" },
+        { text: "ワン", type: "vocab", meaning: "one (wan) — katakana loanword from English" },
+        { text: " " },
+        { text: "ツー", type: "vocab", meaning: "two (tsuu) — katakana loanword from English; a count-in before the song begins" },
       ]},
       // ── VERSE 1 ──
       { time: 13.56, japanese: "エマージェンシー 0時 奴らは", segments: [
