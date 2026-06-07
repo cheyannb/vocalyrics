@@ -1039,7 +1039,7 @@ export const SONG_DATA = [
   {
     title: "Senbonzakura",
     title_jp: "千本桜",
-    artist: "Kurousa-P",
+    artist: "WhiteFlame",
     category: "Classic Favorites",
     youtube_url: "https://www.youtube.com/watch?v=shs0rAiwsGQ",
     youtube_id: "shs0rAiwsGQ",
