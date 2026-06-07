@@ -775,7 +775,7 @@ export const SONG_DATA = [
   {
     title: "Mesmerizer",
     title_jp: "メズマライザー",
-    artist: "Satsuki ga Tenkomori",
+    artist: "32ki",
     category: "Highest-Viewed Hits",
     youtube_url: "https://www.youtube.com/watch?v=19y8YTbvri8",
     youtube_id: "19y8YTbvri8",
