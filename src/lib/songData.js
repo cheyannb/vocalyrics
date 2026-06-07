@@ -1307,22 +1307,7 @@ export const SONG_DATA = [
       { word: "反抗", reading: "はんこう (hankou)", meaning: "rebellion" },
     ]
   },
-  {
-    title: "Goodbye Sengen",
-    title_jp: "グッバイ宣言",
-    artist: "Chinozo",
-    category: "Intense & Edgy",
-    youtube_url: "https://www.youtube.com/watch?v=z1W4c7ym49Y",
-    youtube_id: "z1W4c7ym49Y",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "宣言", reading: "せんげん (sengen)", meaning: "declaration" },
-      { word: "退屈", reading: "たいくつ (taikutsu)", meaning: "boredom" },
-      { word: "逃げる", reading: "にげる (nigeru)", meaning: "to run away" },
-      { word: "本当", reading: "ほんとう (hontou)", meaning: "truth/really" },
-      { word: "生きる", reading: "いきる (ikiru)", meaning: "to live" },
-    ]
-  },
+
   {
     title: "Bug",
     title_jp: "バグ",
