@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Bookmark, BookmarkCheck, ExternalLink } from "lucide-react";
+import { ArrowLeft, Bookmark, BookmarkCheck, ExternalLink, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import { base44 } from "@/api/base44Client";
 import { SONG_DATA } from "../lib/songData";
@@ -116,6 +116,17 @@ export default function SongDetail() {
 
         {/* Video */}
         <VideoPlayer song={song} onTimeUpdate={setCurrentTime} />
+
+        {/* Lesson Button */}
+        {song.lyrics_lines && song.lyrics_lines.length > 0 && (
+          <Link
+            to={`/songs/${encodeURIComponent(song.title)}/lesson`}
+            className="inline-flex items-center gap-2 mt-4 mb-2 px-5 py-2.5 rounded-xl bg-primary/15 text-primary font-medium text-sm border border-primary/30 hover:bg-primary/25 transition-all glow-primary"
+          >
+            <BookOpen className="w-4 h-4" />
+            Open Line-by-Line Lesson
+          </Link>
+        )}
 
         {/* Synced Lyrics */}
         {song.lyrics_lines && song.lyrics_lines.length > 0 && (

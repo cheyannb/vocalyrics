@@ -13,6 +13,7 @@ import Vocabulary from './pages/Vocabulary';
 import Quiz from './pages/Quiz';
 import Study from './pages/Study';
 import Request from './pages/Request';
+import Lesson from './pages/Lesson';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const AuthenticatedApp = () => {
@@ -45,6 +46,7 @@ const AuthenticatedApp = () => {
         <Route path="/" element={<Home />} />
         <Route path="/songs" element={<Songs />} />
         <Route path="/songs/:songTitle" element={<SongDetail />} />
+        <Route path="/songs/:songTitle/lesson" element={<Lesson />} />
         <Route path="/vocabulary" element={<Vocabulary />} />
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/study" element={<Study />} />
