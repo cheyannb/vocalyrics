@@ -2083,6 +2083,118 @@ export const SONG_DATA = [
     youtube_url: "https://www.youtube.com/watch?v=ZB75e7vzX0I",
     youtube_id: "ZB75e7vzX0I",
     difficulty: "Advanced",
+    context: "Two exhausted people who find nothing good anywhere decide to dance anyway — in the corner of a world about to end. Sarcasm, shrill voices, and a race to the last train turn into a hop-step waltz; the final 'goodbye, take care' is said to the world itself.",
+    lyrics_lines: [
+      // ── VERSE 1 ──
+      { time: 30.86, japanese: "冗談混じりの境界線上　階段のそのまた向こう", segments: [
+        { text: "冗談", reading: "じょうだん", type: "vocab", meaning: "joke (joudan)" }, { text: "混じりの", reading: "まじりの", type: "grammar", meaning: "mixed with — 混じる + の" }, { text: "境界線", reading: "きょうかいせん", type: "vocab", meaning: "boundary line (kyoukaisen)" }, { text: "上", reading: "じょう", type: "grammar", meaning: "on / atop" }, { text: "　階段", reading: "かいだん", type: "vocab", meaning: "stairs (kaidan)" }, { text: "のそのまた向こう", type: "grammar", meaning: "and just beyond that again — そのまた向こう: beyond, and further still" },
+      ]},
+      { time: 36.55, japanese: "全然良いこともないし、ねえ　その手を引いてみようか?", context: "Nothing good ever happens — so hey, shall I take your hand?", segments: [
+        { text: "全然", reading: "ぜんぜん", type: "grammar", meaning: "(not) at all — used with a negative" }, { text: "良いこともないし", reading: "よいこともないし", type: "grammar", meaning: "there's nothing good, and — こともない: not even one thing" }, { text: "、ねえ　その手を", reading: "そのて", type: "grammar", meaning: ", hey — that hand (sono te)" }, { text: "引いてみようか?", reading: "ひいてみようか", type: "grammar", meaning: "shall we try taking it? — 手を引く: lead someone by the hand; てみる (try) + volitional か" },
+      ]},
+      { time: 42.18, japanese: "散々躓いたダンスを、そう、祭壇の上で踊るの?", segments: [
+        { text: "散々", reading: "さんざん", type: "grammar", meaning: "utterly / terribly (sanzan)" }, { text: "躓いた", reading: "つまづいた", type: "vocab", meaning: "stumbled (tsumazuita)" }, { text: "ダンスを、そう、", type: "vocab", meaning: "dance... yes —" }, { text: "祭壇", reading: "さいだん", type: "vocab", meaning: "altar (saidan)" }, { text: "の上で", reading: "のうえで", type: "grammar", meaning: "on top of" }, { text: "踊るの?", reading: "おどるの", type: "grammar", meaning: "will (we) dance? — の question ending" },
+      ]},
+      { time: 47.87, japanese: "呆然に目が眩んじゃうから　どうでしょう、一緒にここで!", segments: [
+        { text: "呆然に", reading: "ぼうぜんに", type: "grammar", meaning: "dumbfounded — adverbial use" }, { text: "目", reading: "め", type: "vocab", meaning: "eyes (me)" }, { text: "が", type: "grammar", meaning: "subject marker particle" }, { text: "眩んじゃうから", reading: "くらんじゃうから", type: "grammar", meaning: "they'll be dazzled anyway — 眩む + ちゃう + から (so)" }, { text: "　どうでしょう", type: "grammar", meaning: "how about it? — polite suggestion" }, { text: "、一緒にここで!", reading: "いっしょに", type: "grammar", meaning: "together, right here! — 一緒に (together) + で (location)" },
+      ]},
+      // ── VERSE 2 ──
+      { time: 64.63, japanese: "甲高い声が部屋を埋めるよ　最低な意味を渦巻いて", context: "Shrill voices fill the room, swirling with the worst meanings.", segments: [
+        { text: "甲高い", reading: "かんだかい", type: "vocab", meaning: "shrill / high-pitched (kandakai)" }, { text: "声", reading: "こえ", type: "vocab", meaning: "voice (koe)" }, { text: "が", type: "grammar", meaning: "subject marker particle" }, { text: "部屋", reading: "へや", type: "vocab", meaning: "room (heya)" }, { text: "を埋めるよ", reading: "うめるよ", type: "vocab", meaning: "fills it up (umeru yo)" }, { text: "　最低", reading: "さいてい", type: "vocab", meaning: "the worst (saitei)" }, { text: "な意味を", reading: "いみ", type: "vocab", meaning: "meanings (imi) — な links a na-adjective" }, { text: "渦巻いて", reading: "うずまいて", type: "grammar", meaning: "swirling around — 渦巻く te-form" },
+      ]},
+      { time: 70.31, japanese: "当然、良いこともないし　さあ、思い切り吐き出そうか", segments: [
+        { text: "当然", reading: "とうぜん", type: "grammar", meaning: "naturally / of course (touzen)" }, { text: "、良いこともないし", reading: "よいこともないし", type: "grammar", meaning: "nothing good here either — こともない + し (and)" }, { text: "　さあ", type: "vocab", meaning: "come on / well then (saa)" }, { text: "、思い切り", reading: "おもいきり", type: "grammar", meaning: "with all one's might (omoikiri)" }, { text: "吐き出そうか", reading: "はきだそうか", type: "grammar", meaning: "shall we spit it all out? — volitional of 吐き出す + か" },
+      ]},
+      { time: 75.91, japanese: "「短い言葉で繋がる意味を　顔も合わさずに毛嫌う理由を", context: "A quoted monologue begins: the meaning carried in brief words, the reason to hate without even meeting eyes...", segments: [
+        { text: "「短い", reading: "みじかい", type: "vocab", meaning: "short (mijikai)" }, { text: "言葉", reading: "ことば", type: "vocab", meaning: "words (kotoba)" }, { text: "で繋がる", reading: "つながる", type: "grammar", meaning: "connect through — 繋がる" }, { text: "意味を", reading: "いみ", type: "vocab", meaning: "the meaning (imi)" }, { text: "　顔", reading: "かお", type: "vocab", meaning: "face (kao)" }, { text: "も合わさずに", reading: "あわさずに", type: "grammar", meaning: "without even meeting (them) — ずに: negative 'without doing'" }, { text: "毛嫌う", reading: "けぎらう", type: "vocab", meaning: "to irrationally hate (kegirau)" }, { text: "理由を", reading: "りゆう", type: "vocab", meaning: "the reason (riyuu)" },
+      ]},
+      { time: 77.36, japanese: "さがしても　さがしても　見つからないけど", segments: [
+        { text: "さがしても　さがしても", reading: "さがしても", type: "grammar", meaning: "even searching, even searching — 探す + ても (even if)" }, { text: "　見つからないけど", reading: "みつからないけど", type: "grammar", meaning: "it can't be found, though — 見つかる negative + けど (but)" },
+      ]},
+      { time: 81.48, japanese: "はにかみながら怒ったって　目を伏せながら笑ったって", context: "Shy smiles with anger, downcast eyes with laughter — either way...", segments: [
+        { text: "はにかみながら", reading: "はにかみながら", type: "grammar", meaning: "while smiling shyly — はにかむ + ながら" }, { text: "怒ったって", reading: "おこったって", type: "grammar", meaning: "even if you get angry — たって (even if)" }, { text: "　目を伏せながら", reading: "めをふせながら", type: "grammar", meaning: "while casting your eyes down — 伏せる + ながら" }, { text: "笑ったって", reading: "わらったって", type: "grammar", meaning: "even if you laugh — たって (even if)" },
+      ]},
+      { time: 84.31, japanese: "そんなの、どうせ、つまらないわ!」", context: "...it's all pointless anyway — the quote closes.", segments: [
+        { text: "そんなの、どうせ、", type: "grammar", meaning: "that kind of thing, in any case — どうせ: no matter what happens" }, { text: "つまらないわ!」", reading: "つまらないわ", type: "vocab", meaning: "it's pointless! — つまらない (boring/pointless) + わ (feminine ending)" },
+      ]},
+      // ── CHORUS 1 ──
+      { time: 87.13, japanese: "ホップ・ステップで踊ろうか", segments: [
+        { text: "ホップ・ステップ", type: "vocab", meaning: "hop, step — katakana dance-count loanwords" }, { text: "で踊ろうか", reading: "おどろうか", type: "grammar", meaning: "shall we dance? — で (with) + volitional + か" },
+      ]},
+      { time: 89.55, japanese: "世界の隅っこでワン・ツー", context: "Dancing one-two in the corner of the world — the song's signature image.", segments: [
+        { text: "世界", reading: "せかい", type: "vocab", meaning: "world (sekai)" }, { text: "の隅っこで", reading: "すみっこで", type: "vocab", meaning: "in the corner of — 隅っこ: a little out-of-the-way nook" }, { text: "ワン・ツー", type: "vocab", meaning: "one-two — more dance counts" },
+      ]},
+      { time: 92.70, japanese: "ちょっとクラッとしそうになる終末感を楽しんで", segments: [
+        { text: "ちょっと", type: "vocab", meaning: "a little (chotto)" }, { text: "クラッと", type: "grammar", meaning: "dizzy — onomatopoeic クラッ + と: head spinning" }, { text: "しそうになる", type: "grammar", meaning: "starting to feel — そうになる: on the verge of" }, { text: "終末感", reading: "しゅうまつかん", type: "vocab", meaning: "sense of ending / end-of-the-world feeling (shuumatsukan)" }, { text: "を楽しんで", reading: "たのしんで", type: "grammar", meaning: "enjoy it — te-form request of 楽しむ" },
+      ]},
+      { time: 98.35, japanese: "パッとフラッと消えちゃいそな　次の瞬間を残そうか", segments: [
+        { text: "パッとフラッと", type: "grammar", meaning: "in a flash, flickering away — onomatopoeia パッ + フラッ + と" }, { text: "消えちゃいそな", reading: "きえちゃいそな", type: "grammar", meaning: "about to vanish — 消える + ちゃう + そうな (contracted そな)" }, { text: "　次の瞬間を", reading: "つぎのしゅんかん", type: "vocab", meaning: "the next moment (tsugi no shunkan)" }, { text: "残そうか", reading: "のこそうか", type: "grammar", meaning: "shall we leave it behind? — volitional of 残す + か" },
+      ]},
+      { time: 103.87, japanese: "くるくるくるくるり　回る世界に酔う", context: "Round and round — the spinning world makes you dizzy. The title's dance hall.", segments: [
+        { text: "くるくるくるくるり", type: "vocab", meaning: "spinning round and round — onomatopoeia; the title's whirling" }, { text: "　回る世界に", reading: "まわるせかい", type: "grammar", meaning: "in the spinning world — 回る modifies 世界" }, { text: "酔う", reading: "よう", type: "vocab", meaning: "to get drunk / dizzy on (you)" },
+      ]},
+      // ── VERSE 3 ──
+      { time: 120.69, japanese: "傍観者だけの空間。", context: "A space of nothing but bystanders — nobody joins in.", segments: [
+        { text: "傍観者", reading: "ぼうかんしゃ", type: "vocab", meaning: "bystander / onlooker (boukansha)" }, { text: "だけの空間。", reading: "くうかん", type: "grammar", meaning: "a space of nothing but — だけ (only) + 空間 (space)" },
+      ]},
+      { time: 123.60, japanese: "レースを最終電車に乗り込んで、", context: "Racing to catch the last train.", segments: [
+        { text: "レースを", type: "vocab", meaning: "the race (reisu) — racing for the last train" }, { text: "最終電車", reading: "さいしゅうでんしゃ", type: "vocab", meaning: "the last train (saishuu densha)" }, { text: "に乗り込んで、", reading: "のりこんで", type: "grammar", meaning: "boarding it — 乗り込む te-form" },
+      ]},
+      { time: 126.43, japanese: "「全然良いこともないし、ねえ、この手を引いてみようか?」", context: "The opening line returns as a quote — now she's the one offering her hand.", segments: [
+        { text: "「全然", reading: "ぜんぜん", type: "grammar", meaning: "(not) at all" }, { text: "良いこともないし、ねえ、", reading: "よいこともないし", type: "grammar", meaning: "there's nothing good, hey —" }, { text: "この手を引いてみようか?」", reading: "このて", type: "grammar", meaning: "shall I try taking this hand? — echo of the opening, now quoted" },
+      ]},
+      { time: 132.06, japanese: "なんだかいつもと違う。運命のいたずらを信じてみる。", context: "Somehow today feels different — maybe she'll trust fate's little prank.", segments: [
+        { text: "なんだか", type: "grammar", meaning: "somehow / for some reason (nandaka)" }, { text: "いつもと違う。", reading: "ちがう", type: "grammar", meaning: "different from usual — いつも (always) + と違う" }, { text: "運命", reading: "うんめい", type: "vocab", meaning: "fate (unmei)" }, { text: "のいたずらを", reading: "いたずら", type: "vocab", meaning: "'s little prank — いたずら: mischief" }, { text: "信じてみる。", reading: "しんじてみる", type: "grammar", meaning: "maybe I'll try believing it — 信じる + てみる" },
+      ]},
+      { time: 137.64, japanese: "散々躓いたダンスを、そう、思い切り馬鹿にしようか", segments: [
+        { text: "散々躓いたダンスを、そう、", reading: "さんざんつまづいた", type: "grammar", meaning: "that clumsily-stumbled dance, yes — 散々 (utterly) + 躓いた (stumbled)" }, { text: "思い切り", reading: "おもいきり", type: "grammar", meaning: "with everything you've got (omoikiri)" }, { text: "馬鹿にしようか", reading: "ばかにしようか", type: "grammar", meaning: "shall we just laugh at it? — 馬鹿にする (to mock) volitional + か" },
+      ]},
+      { time: 143.25, japanese: "「つまらん動き繰り返す意味を　音に合わせて足を踏む理由を", context: "Second quoted monologue: the meaning of repeating dull movements, the reason to step in time...", segments: [
+        { text: "「つまらん", reading: "つまらん", type: "vocab", meaning: "pointless — rough/masculine form of つまらない" }, { text: "動き", reading: "うごき", type: "vocab", meaning: "movement (ugoki)" }, { text: "繰り返す", reading: "くりかえす", type: "vocab", meaning: "repeating (kurikaesu)" }, { text: "意味を", reading: "いみ", type: "vocab", meaning: "the meaning (imi)" }, { text: "　音に合わせて", reading: "おとにあわせて", type: "grammar", meaning: "matching the sound — 合わせる te-form" }, { text: "足を踏む", reading: "あしふむ", type: "grammar", meaning: "stepping (feet) — 踏む: to stamp" }, { text: "理由を", reading: "りゆう", type: "vocab", meaning: "the reason (riyuu)" },
+      ]},
+      { time: 146.11, japanese: "さがしても　さがしても　見つからないから", segments: [
+        { text: "さがしても　さがしても", reading: "さがしても", type: "grammar", meaning: "search and search — ても (even if)" }, { text: "　見つからないから", reading: "みつからないから", type: "grammar", meaning: "it can't be found, so — から (reason)" },
+      ]},
+      { time: 148.84, japanese: "悲しいときに踊りたいの　泣きたいときに笑いたいの」", context: "'I want to dance when I'm sad, laugh when I want to cry' — the twisted truth under the sarcasm.", segments: [
+        { text: "悲しい", reading: "かなしい", type: "vocab", meaning: "sad (kanashii)" }, { text: "ときに踊りたいの", reading: "おどりたい", type: "grammar", meaning: "I want to dance when — とき (when) + たい (want)" }, { text: "　泣きたいときに", reading: "なきたい", type: "grammar", meaning: "when I want to cry — 泣く + たい" }, { text: "笑いたいの」", reading: "わらいたい", type: "grammar", meaning: "I want to laugh — 笑う + たい; the quote ends" },
+      ]},
+      { time: 151.65, japanese: "そんなわがまま疲れちゃうわ!", segments: [
+        { text: "そんなわがまま", reading: "わがまま", type: "vocab", meaning: "that kind of selfishness (wagamama)" }, { text: "疲れちゃうわ!", reading: "つかれちゃう", type: "grammar", meaning: "gets tiring! — 疲れる + ちゃう + わ (feminine ending)" },
+      ]},
+      // ── CHORUS 2 ──
+      { time: 154.44, japanese: "ポップにセンスを歌おうか", segments: [
+        { text: "ポップに", type: "vocab", meaning: "pop-ly / in pop style (poppu)" }, { text: "センスを歌おうか", reading: "せんす", type: "grammar", meaning: "shall we sing our sense/style? — volitional + か" },
+      ]},
+      { time: 156.91, japanese: "世界、俯いちゃう前に", context: "Before the world turns its face away.", segments: [
+        { text: "世界、", reading: "せかい", type: "vocab", meaning: "world (sekai)" }, { text: "俯いちゃう前に", reading: "うつむいちゃうまえに", type: "grammar", meaning: "before it turns its face away — 俯く + ちゃう + 前に (before)" },
+      ]},
+      { time: 160.12, japanese: "キュッとしちゃった心の音をどうぞ。", context: "Please, listen — that tight squeeze in the heart, its sound.", segments: [
+        { text: "キュッと", type: "grammar", meaning: "with a squeeze — onomatopoeic キュッ + と" }, { text: "しちゃった", type: "grammar", meaning: "has become — する + ちゃう" }, { text: "心の音を", reading: "こころのおと", type: "vocab", meaning: "the heart's sound (kokoro no oto)" }, { text: "どうぞ。", type: "vocab", meaning: "here, please (douzo)" },
+      ]},
+      { time: 163.44, japanese: "まだまだ忘れないわ。", segments: [
+        { text: "まだまだ", type: "grammar", meaning: "not nearly yet — まだ doubled for emphasis" }, { text: "忘れないわ。", reading: "わすれないわ", type: "vocab", meaning: "I won't forget — 忘れる negative + わ" },
+      ]},
+      { time: 165.70, japanese: "なんて綺麗な眺めなんでしょうか!", context: "What a beautiful view — from the world's edge.", segments: [
+        { text: "なんて綺麗な", reading: "なんてきれい", type: "grammar", meaning: "what a beautiful... — なんて: 'how...!'" }, { text: "眺め", reading: "ながめ", type: "vocab", meaning: "view / scenery (nagame)" }, { text: "なんでしょうか!", type: "grammar", meaning: "isn't it! — なんでしょう (wondering) + か" },
+      ]},
+      { time: 168.14, japanese: "ここから見える風景", segments: [
+        { text: "ここから見える", reading: "みえる", type: "grammar", meaning: "visible from here — 見える (can be seen)" }, { text: "風景", reading: "ふうけい", type: "vocab", meaning: "scenery (fuukei)" },
+      ]},
+      { time: 171.32, japanese: "きっと何一つ変わらないから、枯れた地面を這うの。", context: "Nothing will ever change, so we crawl along the withered ground.", segments: [
+        { text: "きっと", type: "grammar", meaning: "surely (kitto)" }, { text: "何一つ", reading: "なにひとつ", type: "grammar", meaning: "not a single thing — always with a negative" }, { text: "変わらないから、", reading: "かわらないから", type: "vocab", meaning: "nothing will change, so — 変わる negative + から" }, { text: "枯れた", reading: "かれた", type: "grammar", meaning: "withered — past of 枯れる" }, { text: "地面を", reading: "じめん", type: "vocab", meaning: "the ground (jimen)" }, { text: "這うの。", reading: "はうの", type: "vocab", meaning: "we crawl along it — 這う + の (soft ending)" },
+      ]},
+      // ── FINAL CHORUS ──
+      { time: 176.92, japanese: "ホップ・ステップで踊ろうか" },
+      { time: 179.40, japanese: "世界の隅っこでワン・ツー" },
+      { time: 182.57, japanese: "ちょっとクラッとしそうになる終末感を楽しんで" },
+      { time: 188.19, japanese: "パッとフラッと消えちゃいそな　次の瞬間を残そうか" },
+      { time: 193.71, japanese: "さよなら、お元気で。", context: "Goodbye, take care — said like a bow at the end of the dance.", segments: [
+        { text: "さよなら、", type: "vocab", meaning: "goodbye (sayonara)" }, { text: "お元気で。", reading: "おげんきで", type: "grammar", meaning: "take care / be well — polite parting well-wish" },
+      ]},
+      { time: 196.24, japanese: "終わる世界に言う", context: "'Goodbye, take care' — said to a world that's ending.", segments: [
+        { text: "終わる", reading: "おわる", type: "grammar", meaning: "ending — 終わる modifies 世界" }, { text: "世界に", reading: "せかい", type: "vocab", meaning: "to the world (sekai)" }, { text: "言う", reading: "いう", type: "vocab", meaning: "(we) say it (iu)" },
+      ]},
+    ],
     vocabulary: [
       { word: "終わり", reading: "おわり (owari)", meaning: "end" },
       { word: "踊り", reading: "おどり (odori)", meaning: "dance" },
