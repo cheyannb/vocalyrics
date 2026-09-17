@@ -1,5 +1,6 @@
 // Song catalog with vocabulary data
 import { KyoufuuAllBack } from "@/lib/songs/KyoufuuAllBack";
+import { Usseewa } from "@/lib/songs/Usseewa";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2209,22 +2210,7 @@ export const SONG_DATA = [
     ]
   },
 
-  {
-    title: "Usseewa",
-    title_jp: "うっせぇわ",
-    artist: "Ado / Vocaloid cover",
-    category: "Intense & Edgy",
-    youtube_url: "https://www.youtube.com/watch?v=Qp3b-RXtz4w",
-    youtube_id: "Qp3b-RXtz4w",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "うるさい", reading: "うるさい (urusai)", meaning: "noisy/shut up" },
-      { word: "社会", reading: "しゃかい (shakai)", meaning: "society" },
-      { word: "普通", reading: "ふつう (futsuu)", meaning: "normal/ordinary" },
-      { word: "天才", reading: "てんさい (tensai)", meaning: "genius" },
-      { word: "反抗", reading: "はんこう (hankou)", meaning: "rebellion" },
-    ]
-  },
+  Usseewa,
 
   {
     title: "Bug",
