@@ -1,4 +1,6 @@
 // Song catalog with vocabulary data
+import { KyoufuuAllBack } from "@/lib/songs/KyoufuuAllBack";
+
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
   {
@@ -662,116 +664,7 @@ export const SONG_DATA = [
       { word: "抱きしめる", reading: "だきしめる (dakishimeru)", meaning: "to embrace" },
     ]
   },
-  {
-    title: "Kyoufuu All Back",
-    title_jp: "強風オールバック",
-    artist: "Yukopi",
-    category: "Highest-Viewed Hits",
-    youtube_url: "https://www.youtube.com/watch?v=D6DVTLvOupE",
-    youtube_id: "D6DVTLvOupE",
-    difficulty: "Beginner",
-    lyrics_lines: [
-      { time: 1.12, japanese: "外出た瞬間 終わったわ", segments: [
-        { text: "外", reading: "そと", type: "vocab", meaning: "outside (soto)" },
-        { text: "出た", reading: "でた", type: "vocab", meaning: "went out/exited (deta)" },
-        { text: " " },
-        { text: "瞬間", reading: "しゅんかん", type: "vocab", meaning: "instant/moment (shunkan)" },
-        { text: " " },
-        { text: "終わった", reading: "おわった", type: "vocab", meaning: "it's over/finished (owatta)" },
-        { text: "わ", type: "grammar", meaning: "sentence-ending particle (wa) — feminine emphasis" },
-      ]},
-      { time: 4.10, japanese: "天気は良いのに 進めない", segments: [
-        { text: "天気", reading: "てんき", type: "vocab", meaning: "weather (tenki)" },
-        { text: "は", type: "grammar", meaning: "topic marker particle" },
-        { text: "良い", reading: "よい", type: "vocab", meaning: "good/nice (yoi)" },
-        { text: "のに", type: "grammar", meaning: "but/yet/despite — contrast particle" },
-        { text: " " },
-        { text: "進める", reading: "すすめる", type: "vocab", meaning: "to advance/progress (susumeru)" },
-        { text: "ない", type: "grammar", meaning: "cannot — negative form" },
-      ]},
-      { time: 7.64, japanese: "風 強すぎて お亡くなり", segments: [
-        { text: "風", reading: "かぜ", type: "vocab", meaning: "wind (kaze)" },
-        { text: " " },
-        { text: "強すぎて", reading: "つよすぎて", type: "vocab", meaning: "too strong (tsuyosugite)" },
-        { text: " " },
-        { text: "お亡くなり", reading: "おなくなり", type: "vocab", meaning: "passed away (humorous/poetic: death by wind)" },
-      ]},
-      { time: 11.21, japanese: "定期 定期 的にオールバック", segments: [
-        { text: "定期", reading: "ていき", type: "vocab", meaning: "regular/fixed (teiki)" },
-        { text: " 定期 " },
-        { text: "的に", reading: "てきに", type: "grammar", meaning: "in a ... manner (teki ni)" },
-        { text: "オールバック", type: "vocab", meaning: "all back — hairstyle swept back" },
-      ]},
-      { time: 29.01, japanese: "地下に潜りたいな って 思いました", segments: [
-        { text: "地下", reading: "ちか", type: "vocab", meaning: "underground (chika)" },
-        { text: "に", type: "grammar", meaning: "direction particle" },
-        { text: "潜り", reading: "もぐり", type: "vocab", meaning: "dive/hide (moguri)" },
-        { text: "たい", type: "grammar", meaning: "want to — desire form" },
-        { text: "な", type: "grammar", meaning: "sentence-ending particle (na)" },
-        { text: " って " },
-        { text: "思いました", reading: "おもいました", type: "vocab", meaning: "I thought (omoimashita)" },
-      ]},
-      { time: 36.11, japanese: "風さえなくなれば あったかいのに", segments: [
-        { text: "風", reading: "かぜ", type: "vocab", meaning: "wind (kaze)" },
-        { text: "さえ", type: "grammar", meaning: "even if/even just (sae)" },
-        { text: "なくなれば", reading: "なくなれば", type: "grammar", meaning: "if it disappeared — conditional form" },
-        { text: " " },
-        { text: "あったかい", reading: "あったかい", type: "vocab", meaning: "warm (attakai)" },
-        { text: "のに", type: "grammar", meaning: "but/despite" },
-      ]},
-      { time: 43.21, japanese: "ずっと座りたいな って 思いました", segments: [
-        { text: "ずっと", type: "vocab", meaning: "always/the whole time (zutto)" },
-        { text: "座り", reading: "すわり", type: "vocab", meaning: "sit (suwari)" },
-        { text: "たい", type: "grammar", meaning: "want to" },
-        { text: "な", type: "grammar", meaning: "sentence-ending particle" },
-        { text: " って 思いました" },
-      ]},
-      { time: 50.28, japanese: "いやいや と 外でたら", segments: [
-        { text: "いやいや", type: "vocab", meaning: "reluctantly (iyaiyas)" },
-        { text: " と " },
-        { text: "外", reading: "そと", type: "vocab", meaning: "outside (soto)" },
-        { text: "でたら", reading: "でたら", type: "grammar", meaning: "when/if I went out — conditional" },
-      ]},
-      { time: 53.92, japanese: "ハト ハト ハト ハト 大乱闘", segments: [
-        { text: "ハト", type: "vocab", meaning: "pigeon (hato) — sound effect/animal onomatopoeia" },
-        { text: " ハト ハト ハト " },
-        { text: "大乱闘", reading: "だいらんとう", type: "vocab", meaning: "great battle/melee (dairantou)" },
-      ]},
-      { time: 57.12, japanese: "ああ 外出た瞬間 終わったわ" },
-      { time: 60.95, japanese: "天気は良いのに 進めない" },
-      { time: 64.46, japanese: "風 強すぎて お亡くなり" },
-      { time: 68.04, japanese: "定期 定期 的にオールバック" },
-      { time: 86.12, japanese: "外出た瞬間 終わったわ" },
-      { time: 89.40, japanese: "天気は良いのに 進めない" },
-      { time: 92.96, japanese: "風 強すぎて お亡くなり" },
-      { time: 96.50, japanese: "定期 定期 的にオールバック" },
-      { time: 100.12, japanese: "そっ と出た瞬間 終わったわ", segments: [
-        { text: "そっ と", type: "vocab", meaning: "quietly/secretly (sot to)" },
-        { text: "出た", reading: "でた", type: "vocab", meaning: "went out (deta)" },
-        { text: "瞬間", reading: "しゅんかん", type: "vocab", meaning: "instant (shunkan)" },
-        { text: " " },
-        { text: "終わったわ", reading: "おわったわ", type: "vocab", meaning: "it's done (owatta wa)" },
-      ]},
-      { time: 103.63, japanese: "天気は良いのに 進めない" },
-      { time: 106.89, japanese: "風 強すぎて お亡くなり" },
-      { time: 110.74, japanese: "定期 定期 的にオールバック" },
-      { time: 114.52, japanese: "髪の毛 強風オールバック", segments: [
-        { text: "髪", reading: "かみ", type: "vocab", meaning: "hair (kami)" },
-        { text: "の", type: "grammar", meaning: "possessive particle" },
-        { text: "毛", reading: "け", type: "vocab", meaning: "hair/strand (ke)" },
-        { text: " " },
-        { text: "強風", reading: "きょうふう", type: "vocab", meaning: "strong wind (kyoufuu)" },
-        { text: "オールバック", type: "vocab", meaning: "all back — swept-back hairstyle" },
-      ]},
-    ],
-    vocabulary: [
-      { word: "強風", reading: "きょうふう (kyoufuu)", meaning: "strong wind" },
-      { word: "髪", reading: "かみ (kami)", meaning: "hair" },
-      { word: "飛ぶ", reading: "とぶ (tobu)", meaning: "to fly" },
-      { word: "笑う", reading: "わらう (warau)", meaning: "to laugh" },
-      { word: "天気", reading: "てんき (tenki)", meaning: "weather" },
-    ]
-  },
+  KyoufuuAllBack,
   {
     title: "Mesmerizer",
     title_jp: "メズマライザー",
@@ -2212,6 +2105,101 @@ export const SONG_DATA = [
     youtube_url: "https://www.youtube.com/watch?v=cm-l2h6GB8Q",
     youtube_id: "cm-l2h6GB8Q",
     difficulty: "Intermediate",
+    context: "An ironic coronation: the world is locked away, acting clever, begging for wishes it will never get. Kanaria's signature style — kanji wordplay (words written with deliberately dramatic kanji like 惨忍), bleeped-out curses, and a chant of 'YOU ARE KING' that crowns the listener while mocking the throne.",
+    lyrics_lines: [
+      // ── VERSE 1 ──
+      { time: 14.40, japanese: "幽閉　利口　逝く前に", context: "Locked away, playing it smart, before we die.", segments: [
+        { text: "幽閉", reading: "ゆうへい", type: "vocab", meaning: "confinement / imprisonment (yuuhei)" }, { text: "　利口", reading: "りこう", type: "vocab", meaning: "clever / smart (rikou)" }, { text: "　逝く前に", reading: "いくまえに", type: "grammar", meaning: "before passing away — 逝く (a literary 'to die') + 前に (before)" },
+      ]},
+      { time: 17.34, japanese: "ユーヘイじゃ利口に難儀ダーリン", context: "Wordplay: 幽閉 (yuuhei) teased apart in katakana like a loanword.", segments: [
+        { text: "ユーヘイじゃ", type: "grammar", meaning: "'imprisonment' — 幽閉 written in katakana as a pun; じゃ = is (old/dialect copula)" }, { text: "利口に", reading: "りこうに", type: "vocab", meaning: "cleverly" }, { text: "難儀", reading: "なんぎ", type: "vocab", meaning: "hardship / trouble (nangi)" }, { text: "ダーリン", type: "vocab", meaning: "darling (daarin)" },
+      ]},
+      { time: 20.17, japanese: "幽閉　ストップ　知ってないし", segments: [
+        { text: "幽閉", reading: "ゆうへい", type: "vocab", meaning: "confinement (yuuhei)" }, { text: "　ストップ", type: "vocab", meaning: "stop (sutoppu)" }, { text: "　知ってないし", reading: "しってないし", type: "grammar", meaning: "I don't know, and — し lists reasons; deliberately nonstandard 知ってない" },
+      ]},
+      { time: 23.06, japanese: "勘弁にしといて　なんて惨忍", context: "Kanji wordplay: 惨忍 written with dramatic kanji instead of the usual 残忍.", segments: [
+        { text: "勘弁にしといて", reading: "かんべんにしといて", type: "vocab", meaning: "give me a break — 勘弁 (pardon) + にしといて (leave it; contracted にしておいて)" }, { text: "　なんて", type: "grammar", meaning: "what a... / saying such a thing as" }, { text: "惨忍", reading: "ざんじん", type: "vocab", meaning: "cruelty (zanjin) — 残忍 written with 惨 (misery) for effect" },
+      ]},
+      { time: 26.17, japanese: "人様願う　欠片のアイロニ", segments: [
+        { text: "人様", reading: "ひとさま", type: "vocab", meaning: "other people (hitosama) — polite/ironic" }, { text: "願う", reading: "ねがう", type: "vocab", meaning: "to wish (negau)" }, { text: "　欠片", reading: "かけら", type: "vocab", meaning: "fragment (kakera)" }, { text: "の", type: "grammar", meaning: "possessive particle" }, { text: "アイロニ", type: "vocab", meaning: "irony (aironi) — katakana loanword" },
+      ]},
+      { time: 29.45, japanese: "だれもが願う無機質なような", segments: [
+        { text: "だれもが", type: "grammar", meaning: "everyone — 誰も (anyone) + が: every single person" }, { text: "願う", reading: "ねがう", type: "vocab", meaning: "wishes (negau)" }, { text: "無機質な", reading: "むきしつ", type: "vocab", meaning: "inorganic / lifeless (mukishitsu)" }, { text: "ような", type: "grammar", meaning: "seeming like — ような" },
+      ]},
+      { time: 32.42, japanese: "一足先に始めてたいような", context: "...as if they all want to start one step ahead of everyone else.", segments: [
+        { text: "一足先に", reading: "ひとあしさきに", type: "grammar", meaning: "a step ahead (hito ashi saki ni)" }, { text: "始めてたい", reading: "はじめてたい", type: "grammar", meaning: "want to start — 始める + たい (want)" }, { text: "ような", type: "grammar", meaning: "as if — ような" },
+      ]},
+      { time: 35.29, japanese: "先が見えないヴァージンハッピーショー", context: "A happiness show no one has ever seen the end of.", segments: [
+        { text: "先", reading: "さき", type: "vocab", meaning: "what lies ahead (saki)" }, { text: "が", type: "grammar", meaning: "subject marker particle" }, { text: "見えない", reading: "みえない", type: "grammar", meaning: "can't be seen — potential negative of 見える" }, { text: "ヴァージンハッピーショー", type: "vocab", meaning: "virgin happy show (vaajin happii shoo) — a first-ever happiness show, in katakana" },
+      ]},
+      // ── PRE-CHORUS ──
+      { time: 40.90, japanese: "無いの新たにお願い一つ", context: "'Nothing, anew — one wish, please.'", segments: [
+        { text: "無いの", reading: "ないの", type: "vocab", meaning: "there's nothing / lacking — 無い (nai) + の; a wordplay motif of the song" }, { text: "新たに", reading: "あらたに", type: "grammar", meaning: "anew (arata ni)" }, { text: "お願い一つ", reading: "おねがいひとつ", type: "vocab", meaning: "one wish / one request (onegai hitotsu)" },
+      ]},
+      { time: 44.11, japanese: "愛も変わらずおまけに", segments: [
+        { text: "愛", reading: "あい", type: "vocab", meaning: "love (ai)" }, { text: "も", type: "grammar", meaning: "also — even love" }, { text: "変わらず", reading: "かわらず", type: "grammar", meaning: "unchanged — 変わる negative stem" }, { text: "おまけに", type: "grammar", meaning: "on top of that / as a bonus (omake ni)" },
+      ]},
+      { time: 46.39, japanese: "ワーニング　ワーニング", segments: [
+        { text: "ワーニング　ワーニング", type: "vocab", meaning: "warning, warning (waaningu) — katakana alarm" },
+      ]},
+      { time: 47.02, japanese: "無いのあなたにお願い一つ", segments: [
+        { text: "無いの", reading: "ないの", type: "vocab", meaning: "nothing / lacking (nai no)" }, { text: "あなた", type: "vocab", meaning: "you (anata)" }, { text: "にお願い一つ", reading: "おねがいひとつ", type: "grammar", meaning: "to (you), one wish — に (to) + お願い一つ (one request)" },
+      ]},
+      { time: 49.88, japanese: "張り詰めた思い込め", context: "A command: stuff your tightly-wound feelings down inside.", segments: [
+        { text: "張り詰めた", reading: "はりつめた", type: "grammar", meaning: "stretched taut / wound up — 張り詰める (to be on edge)" }, { text: "思い込め", reading: "おもいこめ", type: "grammar", meaning: "convince yourself! — imperative of 思い込む (to believe wholeheartedly)" },
+      ]},
+      // ── CHORUS 1 ──
+      { time: 53.08, japanese: "レフトサイド　ライトサイド", segments: [
+        { text: "レフトサイド", type: "vocab", meaning: "left side (refuto saido)" }, { text: "　ライトサイド", type: "vocab", meaning: "right side (raito saido)" },
+      ]},
+      { time: 54.23, japanese: "歯をむき出して　パッパッパッ　照れくさいね", context: "Baring teeth in a wide grin — embarrassing, right?", segments: [
+        { text: "歯", reading: "は", type: "vocab", meaning: "teeth (ha)" }, { text: "を", type: "grammar", meaning: "object marker particle" }, { text: "むき出して", reading: "むきだして", type: "grammar", meaning: "baring / showing bare — むき出す te-form" }, { text: "　パッパッパッ", type: "vocab", meaning: "pa-pa-pa — percussive onomatopoeia" }, { text: "　照れくさいね", reading: "てれくさいね", type: "vocab", meaning: "embarrassing, isn't it (terekusai ne)" },
+      ]},
+      { time: 58.34, japanese: "レフトサイド　ライトサイド" },
+      { time: 59.77, japanese: "歯を突き出して　パッパッパッ", segments: [
+        { text: "歯を", reading: "は", type: "vocab", meaning: "teeth (ha) + object を" }, { text: "突き出して", reading: "つきだして", type: "grammar", meaning: "thrusting out — 突き出す te-form" }, { text: "　パッパッパッ", type: "vocab", meaning: "pa-pa-pa — onomatopoeia" },
+      ]},
+      { time: 62.86, japanese: "HAHA YOU ARE KING" },
+      { time: 66.17, japanese: "YOU ARE KING" },
+      // ── VERSE 2 ──
+      { time: 78.40, japanese: "無邪気に遊ぶ", segments: [
+        { text: "無邪気に", reading: "むじゃきに", type: "vocab", meaning: "innocently (mujaki ni)" }, { text: "遊ぶ", reading: "あそぶ", type: "vocab", meaning: "to play (asobu)" },
+      ]},
+      { time: 79.97, japanese: "期待期待のダーリンダーリン", segments: [
+        { text: "期待期待", reading: "きたいきたい", type: "vocab", meaning: "expectation, expectation (kitai kitai) — doubled for rhythm" }, { text: "の", type: "grammar", meaning: "possessive particle" }, { text: "ダーリンダーリン", type: "vocab", meaning: "darling, darling (daarin daarin) — doubled" },
+      ]},
+      { time: 81.53, japanese: "健気に笑う　痛い痛いの消える", context: "'Pain-pain, go away' — the childhood charm; she smiles bravely as it vanishes.", segments: [
+        { text: "健気に", reading: "けなげに", type: "vocab", meaning: "bravely / admirably (kenage ni)" }, { text: "笑う", reading: "わらう", type: "vocab", meaning: "to smile/laugh (warau)" }, { text: "　痛い痛いの", reading: "いたいいたいの", type: "grammar", meaning: "'the ouch-ouch' — childlike phrase for pain, like 'pain-pain go away'" }, { text: "消える", reading: "きえる", type: "vocab", meaning: "disappears (kieru)" },
+      ]},
+      { time: 83.17, japanese: "無様に〇しねる　苦い思いもなくなって", context: "A censored word mid-verse — even the bitter feelings vanish.", segments: [
+        { text: "無様に", reading: "ぶざまに", type: "vocab", meaning: "pathetically / disgracefully (buzama ni)" }, { text: "〇しねる", type: "grammar", meaning: "censored word — bleeped out with 〇 in the official lyrics" }, { text: "　苦い", reading: "にがい", type: "vocab", meaning: "bitter (nigai)" }, { text: "思いも", reading: "おもい", type: "vocab", meaning: "feelings (omoi) + も (even)" }, { text: "なくなって", reading: "なくなって", type: "grammar", meaning: "are disappearing — なくなる te-form" },
+      ]},
+      { time: 85.70, japanese: "ラララブウ　ラッタッタ", segments: [
+        { text: "ラララブウ", type: "vocab", meaning: "la-la-love (ra-ra-rabuu) — scat singing with ラブ (love) hidden inside" }, { text: "　ラッタッタ", type: "vocab", meaning: "ta-ta-ta — bouncy onomatopoeia" },
+      ]},
+      { time: 88.60, japanese: "嫌い嫌いの最低　泣いて　ダウン", segments: [
+        { text: "嫌い嫌い", reading: "きらいきらい", type: "grammar", meaning: "'hate-hate' — childlike doubled phrase (like 痛い痛い)" }, { text: "の", type: "grammar", meaning: "possessive particle" }, { text: "最低", reading: "さいてい", type: "vocab", meaning: "the worst (saitei)" }, { text: "　泣いて", reading: "ないて", type: "vocab", meaning: "crying (naite) — te-form of 泣く" }, { text: "　ダウン", type: "vocab", meaning: "down (daun) — floored, defeated" },
+      ]},
+      { time: 90.24, japanese: "毎度新たにお願い一つ", context: "Like a customer at a shop: 'one wish, as always.'", segments: [
+        { text: "毎度", reading: "まいど", type: "vocab", meaning: "every time (maido) — a shopkeeper's greeting, 'the usual'" }, { text: "新たに", reading: "あらたに", type: "grammar", meaning: "anew (arata ni)" }, { text: "お願い一つ", reading: "おねがいひとつ", type: "vocab", meaning: "one wish (onegai hitotsu)" },
+      ]},
+      { time: 93.29, japanese: "愛も変わらずピックアップの", segments: [
+        { text: "愛も変わらず", reading: "あいもかわらず", type: "grammar", meaning: "love unchanged too — 変わらず (unchanged) with も (also)" }, { text: "ピックアップの", type: "vocab", meaning: "pickup of (pikku appu) — a guitar pickup, or scooping something up" },
+      ]},
+      { time: 95.70, japanese: "ワーニング　ワーニング" },
+      { time: 96.21, japanese: "無いのあなたにお願い一つ" },
+      { time: 99.04, japanese: "張り詰めた思い込め" },
+      // ── CHORUS 2 ──
+      { time: 101.83, japanese: "レフトサイド　ライトサイド" },
+      { time: 103.05, japanese: "歯をむき出してパッパッパッ　邪魔くさいね", segments: [
+        { text: "歯をむき出してパッパッパッ", reading: "は", type: "grammar", meaning: "baring teeth, pa-pa-pa — むき出す (to bare) + onomatopoeia" }, { text: "　邪魔くさいね", reading: "じゃまくさいね", type: "vocab", meaning: "what a nuisance (jamakusai ne) — 邪魔 (in the way) + くさい, echoing 照れくさい" },
+      ]},
+      { time: 107.33, japanese: "レフトサイド　ライトサイド" },
+      { time: 109.06, japanese: "歯を突き出して　パッパッパッ" },
+      { time: 112.03, japanese: "HAHA YOU ARE KING" },
+      { time: 115.38, japanese: "YOU ARE KING" },
+      { time: 121.20, japanese: "YOU ARE KING" },
+    ],
     vocabulary: [
       { word: "王", reading: "おう (ou)", meaning: "king" },
       { word: "笑う", reading: "わらう (warau)", meaning: "to laugh" },
