@@ -1856,7 +1856,7 @@ export const SONG_DATA = [
     lyrics_lines: [
       // ── VERSE 1 ──
       { time: 32.84, japanese: "ロンリーガールはいつまでも", segments: [
-        { text: "ロンリーガール", type: "vocab", meaning: "lonely girl — katakana loanword (ronrii gaaru)" },
+        { text: "ロンリーガール", type: "vocab", meaning: "rolling girl — wordplay on the title ローリンガール, read as 'ronrii gaaru'" },
         { text: "は", type: "grammar", meaning: "topic marker particle" },
         { text: "いつまでも", type: "grammar", meaning: "forever / no matter how long — いつ (when) + までも (however long)" },
       ]},
