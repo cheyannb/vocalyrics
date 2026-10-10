@@ -1,39 +1,73 @@
-**Welcome to your Base44 project** 
+# 🎵 VocaLyrics
 
-**About**
+### Learn Japanese through the music you love.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+**VocaLyrics** is a web application designed to make learning Japanese more engaging through music and lyrics. By combining music with language learning, VocaLyrics aims to help learners explore Japanese vocabulary, expressions, and language in a more enjoyable and interactive way.
 
-This project contains everything you need to run your app locally.
+🌐 **Website:** [vocalyrics.com](https://vocalyrics.com/)
 
-**Edit the code in your local development environment**
+---
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+## ✨ About the Project
 
-**Prerequisites:** 
+Learning a new language can be challenging, especially when traditional study methods feel repetitive or disconnected from everyday interests.
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+VocaLyrics aims to bridge the gap between music and language learning by giving Japanese learners a way to explore the language through songs they enjoy, including Vocaloid music.
 
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
+The goal is to make Japanese learning more accessible, engaging, and enjoyable for beginners and music enthusiasts alike.
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
-```
+## 🎯 Project Goals
 
-Run the app: `npm run dev`
+- Make Japanese language learning more engaging through music.
+- Help learners explore Japanese lyrics and vocabulary in context.
+- Encourage consistent language practice through an enjoyable learning experience.
+- Connect Japanese music fans with their language-learning goals.
+- Build an accessible web platform for music-based language learning.
 
-**Publish your changes**
+## 🚀 Getting Started
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+Ready to explore VocaLyrics?
 
-**Docs & Support**
+1. Visit [vocalyrics.com](https://vocalyrics.com/).
+2. Explore the available features and learning experience.
+3. Start discovering Japanese through music.
 
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
+## 🛠️ Built With
 
+VocaLyrics is a web-based project.
+
+The specific technologies and frameworks used to build the application can be documented here as the project develops.
+
+- **Platform:** Web application
+- **Focus:** Japanese language learning
+- **Learning approach:** Music and lyrics
+
+## 🗺️ Roadmap
+
+Potential areas for future development include:
+
+- [ ] Expanded Japanese music and Vocaloid learning content
+- [ ] Interactive vocabulary and lyric explanations
+- [ ] Japanese vocabulary review and flashcards
+- [ ] Personalized learning experiences
+- [ ] Progress tracking for learners
+- [ ] Additional tools for Japanese listening and reading practice
+
+*Roadmap items are ideas for future development and do not necessarily represent existing features.*
+
+## 🤝 Contributing
+
+Ideas, feedback, and suggestions for improving music-based language learning are welcome.
+
+If you are interested in contributing code, please open an issue to discuss your proposed changes before submitting a pull request.
+
+## 📬 Contact
+
+Visit the website to learn more about the project:
+
+**[https://vocalyrics.com/](https://vocalyrics.com/)**
+
+---
+
+**Made for Japanese learners who want to turn their love of music into a language-learning experience. 🎶**
 Support: [https://app.base44.com/support](https://app.base44.com/support)
