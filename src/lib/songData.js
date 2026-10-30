@@ -2,6 +2,7 @@
 import { KyoufuuAllBack } from "@/lib/songs/KyoufuuAllBack";
 import { Usseewa } from "@/lib/songs/Usseewa";
 import { Bug } from "@/lib/songs/Bug";
+import { Roki } from "@/lib/songs/Roki";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2215,22 +2216,7 @@ export const SONG_DATA = [
 
   Bug,
   // Category 4: Fun & Catchy
-  {
-    title: "ROKI",
-    title_jp: "ロキ",
-    artist: "Mikito-P",
-    category: "Fun & Catchy",
-    youtube_url: "https://www.youtube.com/watch?v=Xg-qfsKN2_E",
-    youtube_id: "Xg-qfsKN2_E",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "歌う", reading: "うたう (utau)", meaning: "to sing" },
-      { word: "嘘", reading: "うそ (uso)", meaning: "lie" },
-      { word: "本音", reading: "ほんね (honne)", meaning: "true feelings" },
-      { word: "建前", reading: "たてまえ (tatemae)", meaning: "public facade" },
-      { word: "最高", reading: "さいこう (saikou)", meaning: "the best" },
-    ]
-  },
+  Roki,
   {
     title: "Brain Fluid Explosion Girl",
     title_jp: "脳漿炸裂ガール",
