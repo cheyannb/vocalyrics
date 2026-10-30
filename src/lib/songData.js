@@ -1108,8 +1108,8 @@ export const SONG_DATA = [
     title_jp: "ワールドイズマイン",
     artist: "ryo (supercell)",
     category: "Classic Favorites",
-    youtube_url: "https://www.youtube.com/watch?v=EuJ6UR_pD5s",
-    youtube_id: "EuJ6UR_pD5s",
+    youtube_url: "https://www.youtube.com/watch?v=JV11oSbWW70",
+    youtube_id: "JV11oSbWW70",
     difficulty: "Beginner",
     context: "A spoiled princess issues numbered rules to her prince: notice everything about her, never keep her waiting, and always hold her hand. Behind the brattiness is a girl who just wants to be genuinely seen — and the ending twist reveals her prince was paying closer attention than she thought.",
     lyrics_lines: [
