@@ -2215,7 +2215,7 @@ export const SONG_DATA = [
   {
     title: "Bug",
     title_jp: "バグ",
-    artist: "Kanaria",
+    artist: "Kairiki Bear",
     category: "Intense & Edgy",
     youtube_url: "https://www.youtube.com/watch?v=FkO8ub83wss",
     youtube_id: "FkO8ub83wss",
