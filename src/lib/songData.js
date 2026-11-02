@@ -3,6 +3,7 @@ import { KyoufuuAllBack } from "@/lib/songs/KyoufuuAllBack";
 import { Usseewa } from "@/lib/songs/Usseewa";
 import { Bug } from "@/lib/songs/Bug";
 import { Roki } from "@/lib/songs/Roki";
+import { BrainFluidExplosionGirl } from "@/lib/songs/BrainFluidExplosionGirl";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2217,22 +2218,7 @@ export const SONG_DATA = [
   Bug,
   // Category 4: Fun & Catchy
   Roki,
-  {
-    title: "Brain Fluid Explosion Girl",
-    title_jp: "脳漿炸裂ガール",
-    artist: "Rerulili",
-    category: "Fun & Catchy",
-    youtube_url: "https://www.youtube.com/watch?v=Ey_NHZNYTeE",
-    youtube_id: "Ey_NHZNYTeE",
-    difficulty: "Advanced",
-    vocabulary: [
-      { word: "脳", reading: "のう (nou)", meaning: "brain" },
-      { word: "炸裂", reading: "さくれつ (sakuretsu)", meaning: "explosion" },
-      { word: "走る", reading: "はしる (hashiru)", meaning: "to run" },
-      { word: "叫ぶ", reading: "さけぶ (sakebu)", meaning: "to scream" },
-      { word: "限界", reading: "げんかい (genkai)", meaning: "limit" },
-    ]
-  },
+  BrainFluidExplosionGirl,
   {
     title: "Donut Hole",
     title_jp: "ドーナツホール",
