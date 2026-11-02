@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, Bookmark, BookmarkCheck, ExternalLink, BookOpen } from "lucide-react";
+import { ArrowLeft, Bookmark, BookmarkCheck, ExternalLink, BookOpen, Play, Music } from "lucide-react";
 import { motion } from "framer-motion";
 import { base44 } from "@/api/base44Client";
 import { SONG_DATA } from "../lib/songData";
@@ -112,6 +112,20 @@ export default function SongDetail() {
               YouTube
             </a>
           </div>
+        </div>
+
+        {/* How to use the player */}
+        <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 text-xs text-muted-foreground">
+          <span className="inline-flex items-center gap-1.5">
+            <Play className="w-3.5 h-3.5 text-primary" />
+            Tap the video to start playing.
+          </span>
+          {song.lyrics_lines?.length > 0 && (
+            <span className="inline-flex items-center gap-1.5">
+              <Music className="w-3.5 h-3.5 text-primary" />
+              The lyrics below stay synced to the video as it plays.
+            </span>
+          )}
         </div>
 
         {/* Video */}
