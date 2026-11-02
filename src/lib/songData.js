@@ -7,6 +7,7 @@ import { BrainFluidExplosionGirl } from "@/lib/songs/BrainFluidExplosionGirl";
 import { DonutHole } from "@/lib/songs/DonutHole";
 import { AlienAlien } from "@/lib/songs/AlienAlien";
 import { Godish } from "@/lib/songs/Godish";
+import { Vampire } from "@/lib/songs/Vampire";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2226,22 +2227,7 @@ export const SONG_DATA = [
   AlienAlien,
   // Category 5: Emotional & Artistic
   Godish,
-  {
-    title: "Vampire",
-    title_jp: "ヴァンパイア",
-    artist: "DECO*27",
-    category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=e1xCOsgWG0M",
-    youtube_id: "e1xCOsgWG0M",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "血", reading: "ち (chi)", meaning: "blood" },
-      { word: "夜", reading: "よる (yoru)", meaning: "night" },
-      { word: "永遠", reading: "えいえん (eien)", meaning: "eternity" },
-      { word: "欲望", reading: "よくぼう (yokubou)", meaning: "desire" },
-      { word: "噛む", reading: "かむ (kamu)", meaning: "to bite" },
-    ]
-  },
+  Vampire,
   {
     title: "Ghost Rule",
     title_jp: "ゴーストルール",
