@@ -15,6 +15,8 @@ import Study from './pages/Study';
 import Request from './pages/Request';
 import Lesson from './pages/Lesson';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -51,6 +53,8 @@ const AuthenticatedApp = () => {
         <Route path="/quiz" element={<Quiz />} />
         <Route path="/study" element={<Study />} />
         <Route path="/request" element={<Request />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>

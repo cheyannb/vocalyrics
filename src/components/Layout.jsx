@@ -113,6 +113,14 @@ export default function Layout() {
           <Outlet />
         </div>
         <footer className="border-t border-border py-4 px-6 text-center text-xs text-muted-foreground md:ml-0">
+          <Link to="/about" className="hover:text-primary transition-colors">
+            About
+          </Link>
+          <span className="mx-2">·</span>
+          <Link to="/contact" className="hover:text-primary transition-colors">
+            Contact
+          </Link>
+          <span className="mx-2">·</span>
           <Link to="/privacy-policy" className="hover:text-primary transition-colors">
             Privacy Policy
           </Link>
