@@ -4,6 +4,7 @@ import { Usseewa } from "@/lib/songs/Usseewa";
 import { Bug } from "@/lib/songs/Bug";
 import { Roki } from "@/lib/songs/Roki";
 import { BrainFluidExplosionGirl } from "@/lib/songs/BrainFluidExplosionGirl";
+import { DonutHole } from "@/lib/songs/DonutHole";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2219,22 +2220,7 @@ export const SONG_DATA = [
   // Category 4: Fun & Catchy
   Roki,
   BrainFluidExplosionGirl,
-  {
-    title: "Donut Hole",
-    title_jp: "ドーナツホール",
-    artist: "Hachi",
-    category: "Fun & Catchy",
-    youtube_url: "https://www.youtube.com/watch?v=qnX2CdOBcDI",
-    youtube_id: "qnX2CdOBcDI",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "穴", reading: "あな (ana)", meaning: "hole" },
-      { word: "記憶", reading: "きおく (kioku)", meaning: "memory" },
-      { word: "空っぽ", reading: "からっぽ (karappo)", meaning: "empty" },
-      { word: "探す", reading: "さがす (sagasu)", meaning: "to search" },
-      { word: "忘れる", reading: "わすれる (wasureru)", meaning: "to forget" },
-    ]
-  },
+  DonutHole,
   {
     title: "Alien Alien",
     title_jp: "エイリアンエイリアン",
