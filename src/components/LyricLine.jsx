@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Bookmark, BookmarkCheck, Volume2 } from "lucide-react";
 import { createPortal } from "react-dom";
-import { getWordGloss } from "@/lib/wordGlosses";
+import { getWordGloss } from "@/lib/lyricGlossary";
 
 function speakJapanese(text) {
   const utterance = new SpeechSynthesisUtterance(text);
@@ -103,14 +103,15 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
   return (
     <div className="relative flex flex-wrap justify-center gap-x-1 gap-y-1">
       {segments.map((seg, i) => {
-        // words that were never annotated in the song data fall back to the shared glossary
-        const gloss = seg.meaning ? null : getWordGloss(seg.text);
+        // anything the song data leaves unannotated is filled in from the shared
+        // glossary, so every word carries a vocab or grammar tag
+        const gloss = getWordGloss(seg.text);
         const word = gloss
           ? {
               ...seg,
               type: seg.type || gloss.type,
               reading: seg.reading || gloss.reading,
-              meaning: gloss.meaning,
+              meaning: seg.meaning || gloss.meaning,
             }
           : seg;
 

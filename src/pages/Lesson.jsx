@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft, BookOpen, ListOrdered, Sparkles, Puzzle } from "lucide-react";
 import { SONG_DATA } from "@/lib/songData";
 import LessonLine from "@/components/lesson/LessonLine";
+import { buildSegments } from "@/lib/lyricGlossary";
 
 const DIFFICULTY_STYLES = {
   Beginner: "bg-emerald-500/20 text-emerald-400",
@@ -39,7 +40,9 @@ export default function Lesson() {
       cache[line.japanese] = line.segments;
       return line;
     }
-    return { ...line, segments: cache[line.japanese] || null };
+    // a repeated line reuses the earlier breakdown; a line that was never broken
+    // down still gets a vocab or grammar annotation on every word
+    return { ...line, segments: cache[line.japanese] || buildSegments(line.japanese) };
   });
 
   const vocabPoints = resolved.reduce(

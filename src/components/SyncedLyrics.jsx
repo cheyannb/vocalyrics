@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import LyricLine from "./LyricLine";
+import { buildSegments } from "@/lib/lyricGlossary";
 
 export default function SyncedLyrics({ lines, currentTime, savedWords, onToggleSave }) {
   const containerRef = useRef(null);
@@ -56,22 +57,14 @@ export default function SyncedLyrics({ lines, currentTime, savedWords, onToggleS
               ref={isActive ? activeRef : null}
               className={`transition-all duration-300 ${isActive ? "scale-105" : ""}`}
             >
-              {line.segments ? (
-                <LyricLine
-                  segments={line.segments}
-                  showFurigana={showFurigana}
-                  isActive={isActive}
-                  isPast={isPast}
-                  savedWords={savedWords}
-                  onToggleSave={onToggleSave}
-                />
-              ) : (
-                <p className={`font-jp text-center text-base transition-all duration-300 ${
-                  isActive ? "text-primary font-bold text-glow" : isPast ? "text-muted-foreground/40" : "text-muted-foreground/70"
-                }`}>
-                  {line.japanese}
-                </p>
-              )}
+              <LyricLine
+                segments={line.segments || buildSegments(line.japanese)}
+                showFurigana={showFurigana}
+                isActive={isActive}
+                isPast={isPast}
+                savedWords={savedWords}
+                onToggleSave={onToggleSave}
+              />
             </div>
           );
         })}
