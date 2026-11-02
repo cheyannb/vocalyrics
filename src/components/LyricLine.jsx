@@ -105,6 +105,8 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
         const isVocab = seg.type === "vocab";
         const isGrammar = seg.type === "grammar";
         const isAnnotated = isVocab || isGrammar;
+        const isJapanese = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/.test(seg.text || "");
+        const isClickable = isAnnotated || !!seg.meaning;
         const isOpen = popup === i;
 
         const baseColor = isActive
@@ -117,6 +119,8 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
           ? "underline decoration-red-400 underline-offset-4"
           : isGrammar
           ? "underline decoration-blue-400 underline-offset-4"
+          : isJapanese
+          ? "underline decoration-muted-foreground/50 underline-offset-4"
           : "";
 
         return (
@@ -130,8 +134,8 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
 
             <span
               ref={(el) => { if (el) spanRefs.current[i] = el; }}
-              onClick={isAnnotated ? (e) => { e.stopPropagation(); setPopup(isOpen ? null : i); } : undefined}
-              className={`font-jp text-base transition-all duration-300 ${baseColor} ${underline} ${isAnnotated ? "cursor-pointer hover:opacity-80" : ""}`}
+              onClick={isClickable ? (e) => { e.stopPropagation(); setPopup(isOpen ? null : i); } : undefined}
+              className={`font-jp text-base transition-all duration-300 ${baseColor} ${underline} ${isClickable ? "cursor-pointer hover:opacity-80" : ""}`}
             >
               {seg.text}
             </span>
