@@ -6,6 +6,7 @@ import { Roki } from "@/lib/songs/Roki";
 import { BrainFluidExplosionGirl } from "@/lib/songs/BrainFluidExplosionGirl";
 import { DonutHole } from "@/lib/songs/DonutHole";
 import { AlienAlien } from "@/lib/songs/AlienAlien";
+import { Godish } from "@/lib/songs/Godish";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2224,22 +2225,7 @@ export const SONG_DATA = [
   DonutHole,
   AlienAlien,
   // Category 5: Emotional & Artistic
-  {
-    title: "God-ish",
-    title_jp: "神っぽいな",
-    artist: "PinocchioP",
-    category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=EHBFKhLUVig",
-    youtube_id: "EHBFKhLUVig",
-    difficulty: "Advanced",
-    vocabulary: [
-      { word: "神", reading: "かみ (kami)", meaning: "god" },
-      { word: "人間", reading: "にんげん (ningen)", meaning: "human" },
-      { word: "意味", reading: "いみ (imi)", meaning: "meaning" },
-      { word: "存在", reading: "そんざい (sonzai)", meaning: "existence" },
-      { word: "正しい", reading: "ただしい (tadashii)", meaning: "correct/right" },
-    ]
-  },
+  Godish,
   {
     title: "Vampire",
     title_jp: "ヴァンパイア",
