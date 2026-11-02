@@ -5,6 +5,7 @@ import { Bug } from "@/lib/songs/Bug";
 import { Roki } from "@/lib/songs/Roki";
 import { BrainFluidExplosionGirl } from "@/lib/songs/BrainFluidExplosionGirl";
 import { DonutHole } from "@/lib/songs/DonutHole";
+import { AlienAlien } from "@/lib/songs/AlienAlien";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2221,22 +2222,7 @@ export const SONG_DATA = [
   Roki,
   BrainFluidExplosionGirl,
   DonutHole,
-  {
-    title: "Alien Alien",
-    title_jp: "エイリアンエイリアン",
-    artist: "Nayutan Seijin",
-    category: "Fun & Catchy",
-    youtube_url: "https://www.youtube.com/watch?v=2t1NMRse6aI",
-    youtube_id: "2t1NMRse6aI",
-    difficulty: "Beginner",
-    vocabulary: [
-      { word: "宇宙", reading: "うちゅう (uchuu)", meaning: "space/universe" },
-      { word: "星", reading: "ほし (hoshi)", meaning: "star" },
-      { word: "地球", reading: "ちきゅう (chikyuu)", meaning: "Earth" },
-      { word: "友達", reading: "ともだち (tomodachi)", meaning: "friend" },
-      { word: "楽しい", reading: "たのしい (tanoshii)", meaning: "fun/enjoyable" },
-    ]
-  },
+  AlienAlien,
   // Category 5: Emotional & Artistic
   {
     title: "God-ish",
