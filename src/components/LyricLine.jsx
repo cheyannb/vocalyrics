@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Bookmark, BookmarkCheck, Volume2 } from "lucide-react";
 import { createPortal } from "react-dom";
+import { getWordGloss } from "@/lib/wordGlosses";
 
 function speakJapanese(text) {
   const utterance = new SpeechSynthesisUtterance(text);
@@ -102,11 +103,22 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
   return (
     <div className="relative flex flex-wrap justify-center gap-x-1 gap-y-1">
       {segments.map((seg, i) => {
-        const isVocab = seg.type === "vocab";
-        const isGrammar = seg.type === "grammar";
+        // words that were never annotated in the song data fall back to the shared glossary
+        const gloss = seg.meaning ? null : getWordGloss(seg.text);
+        const word = gloss
+          ? {
+              ...seg,
+              type: seg.type || gloss.type,
+              reading: seg.reading || gloss.reading,
+              meaning: gloss.meaning,
+            }
+          : seg;
+
+        const isVocab = word.type === "vocab";
+        const isGrammar = word.type === "grammar";
         const isAnnotated = isVocab || isGrammar;
-        const isJapanese = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/.test(seg.text || "");
-        const isClickable = isAnnotated || !!seg.meaning;
+        const isJapanese = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff]/.test(word.text || "");
+        const isClickable = isAnnotated || !!word.meaning;
         const isOpen = popup === i;
 
         const baseColor = isActive
@@ -126,9 +138,9 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
         return (
           <span key={i} className="relative inline-flex flex-col items-center">
             {/* Furigana */}
-            {showFurigana && seg.reading && (
+            {showFurigana && word.reading && (
               <span className="text-[9px] leading-none text-muted-foreground/70 mb-0.5 font-jp">
-                {seg.reading}
+                {word.reading}
               </span>
             )}
 
@@ -137,12 +149,12 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
               onClick={isClickable ? (e) => { e.stopPropagation(); setPopup(isOpen ? null : i); } : undefined}
               className={`font-jp text-base transition-all duration-300 ${baseColor} ${underline} ${isClickable ? "cursor-pointer hover:opacity-80" : ""}`}
             >
-              {seg.text}
+              {word.text}
             </span>
 
-            {isOpen && seg.meaning && (
+            {isOpen && word.meaning && (
               <SegmentPopup
-                seg={seg}
+                seg={word}
                 anchorRef={{ current: spanRefs.current[i] }}
                 isVocab={isVocab}
                 savedWords={savedWords}
