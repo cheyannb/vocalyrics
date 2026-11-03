@@ -29,7 +29,7 @@ export default function PronunciationButton({ text, title = "Pronounce", classNa
   }
   return (
     <span className="inline-flex min-w-0 max-w-full flex-col items-start gap-1">
-      <button type="button" onClick={pronounce} disabled={loading} title={`${title} (AI-generated voice)`} aria-label={title} className={className}>
+      <button type="button" onClick={pronounce} disabled={loading} title={title} aria-label={title} className={className}>
         {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Volume2 className="w-4 h-4" />}
       </button>
       {src && <audio ref={audioRef} src={src} controls aria-label="AI-generated Japanese pronunciation" className="h-8 w-36 max-w-full" onError={() => setError("Audio could not be played. Tap pronounce to retry.")} />}

@@ -1,9 +1,10 @@
 import { base44 } from "@/api/base44Client";
+import speakDeviceJapanese from "@/lib/deviceJapaneseSpeech";
 
 const audioCache = new Map();
 export async function getJapaneseAudio(text) {
   if (!(await base44.auth.isAuthenticated())) {
-    base44.auth.redirectToLogin(window.location.href);
+    await speakDeviceJapanese(text);
     return null;
   }
   const key = text.trim();
