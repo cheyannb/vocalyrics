@@ -3,13 +3,7 @@ import { Bookmark, BookmarkCheck, Volume2 } from "lucide-react";
 import { createPortal } from "react-dom";
 import { getWordGloss } from "@/lib/lyricGlossary";
 
-function speakJapanese(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "ja-JP";
-  utterance.rate = 0.9;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
-}
+import { speakJapanese } from "@/lib/japaneseSpeech";
 
 function SegmentPopup({ seg, anchorRef, isVocab, savedWords, onToggleSave, onClose }) {
   const popupRef = useRef(null);

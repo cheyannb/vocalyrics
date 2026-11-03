@@ -1,12 +1,6 @@
 import { Volume2, Repeat } from "lucide-react";
 
-function speakJapanese(text) {
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = "ja-JP";
-  utterance.rate = 0.9;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.speak(utterance);
-}
+import { speakJapanese } from "@/lib/japaneseSpeech";
 
 export default function LessonLine({ line, index }) {
   const annotated = (line.segments || []).filter(
