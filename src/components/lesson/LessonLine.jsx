@@ -1,6 +1,6 @@
-import { Volume2, Repeat } from "lucide-react";
+import { Repeat } from "lucide-react";
 
-import { speakJapanese } from "@/lib/japaneseSpeech";
+import PronunciationButton from "@/components/PronunciationButton";
 
 export default function LessonLine({ line, index }) {
   const annotated = (line.segments || []).filter(
@@ -28,13 +28,7 @@ export default function LessonLine({ line, index }) {
             {line.japanese}
           </p>
         </div>
-        <button
-          onClick={() => speakJapanese(line.japanese)}
-          className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-all shrink-0"
-          title="Listen to this line"
-        >
-          <Volume2 className="w-4 h-4" />
-        </button>
+        <PronunciationButton text={line.japanese} title="Listen to this line" className="p-2 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-all shrink-0" />
       </div>
 
       {line.context && (

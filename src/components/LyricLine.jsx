@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
-import { Bookmark, BookmarkCheck, Volume2 } from "lucide-react";
+import { Bookmark, BookmarkCheck } from "lucide-react";
 import { createPortal } from "react-dom";
 import { getWordGloss } from "@/lib/lyricGlossary";
 
-import { speakJapanese } from "@/lib/japaneseSpeech";
+import PronunciationButton from "@/components/PronunciationButton";
 
 function SegmentPopup({ seg, anchorRef, isVocab, savedWords, onToggleSave, onClose }) {
   const popupRef = useRef(null);
@@ -59,13 +59,7 @@ function SegmentPopup({ seg, anchorRef, isVocab, savedWords, onToggleSave, onClo
       <div className="flex items-start justify-between gap-2 mb-1">
         <div className="flex items-center gap-1.5">
           <p className="font-jp text-sm font-bold text-foreground">{seg.text}</p>
-          <button
-            onClick={(e) => { e.stopPropagation(); speakJapanese(seg.text); }}
-            className="p-1 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-all"
-            title="Pronounce"
-          >
-            <Volume2 className="w-3 h-3" />
-          </button>
+          <PronunciationButton text={seg.text} className="p-1 rounded-lg bg-secondary text-muted-foreground hover:text-primary transition-all" />
         </div>
         {onToggleSave && (
           <button
