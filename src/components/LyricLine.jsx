@@ -2,12 +2,18 @@ import { useState, useRef, useEffect } from "react";
 import { Bookmark, BookmarkCheck } from "lucide-react";
 import { createPortal } from "react-dom";
 import { getWordGloss } from "@/lib/lyricGlossary";
+import { prefetchJapaneseAudio } from "@/lib/japaneseSpeech";
 
 import PronunciationButton from "@/components/PronunciationButton";
 
 function SegmentPopup({ seg, anchorRef, isVocab, savedWords, onToggleSave, onClose }) {
   const popupRef = useRef(null);
   const [pos, setPos] = useState({ top: 0, left: 0 });
+
+  // The word's audio starts generating as the popup opens, so the speaker plays instantly.
+  useEffect(() => {
+    prefetchJapaneseAudio(seg.text);
+  }, [seg.text]);
 
   useEffect(() => {
     if (anchorRef.current) {
@@ -136,6 +142,8 @@ export default function LyricLine({ segments, showFurigana, isActive, isPast, sa
             <span
               ref={(el) => { if (el) spanRefs.current[i] = el; }}
               onClick={isClickable ? (e) => { e.stopPropagation(); setPopup(isOpen ? null : i); } : undefined}
+              onPointerEnter={isClickable ? () => prefetchJapaneseAudio(word.text) : undefined}
+              onPointerDown={isClickable ? () => prefetchJapaneseAudio(word.text) : undefined}
               className={`font-jp text-base transition-all duration-300 ${baseColor} ${underline} ${isClickable ? "cursor-pointer hover:opacity-80" : ""}`}
             >
               {word.text}
