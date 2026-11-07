@@ -10,6 +10,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "klIxS5o65C4",
     difficulty: "Intermediate",
     context: "A Miku-and-Teto duet that keeps stacking the word for hate on top of itself, the two voices trading barbs back and forth.",
+    vocabulary: [
+      { word: "嫌い", reading: "きらい (kirai)", meaning: "hateful / disliked" },
+      { word: "大嫌い", reading: "だいきらい (daikirai)", meaning: "really hate" },
+      { word: "我慢", reading: "がまん (gaman)", meaning: "endurance / putting up with something" },
+      { word: "素直", reading: "すなお (sunao)", meaning: "honest / obedient, without resistance" },
+      { word: "裏切る", reading: "うらぎる (uragiru)", meaning: "to betray" },
+      { word: "泣く", reading: "なく (naku)", meaning: "to cry" },
+    ],
   },
   {
     title: "Telepathy",
@@ -20,6 +28,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "c56TpxfO9q0",
     difficulty: "Intermediate",
     context: "DECO*27's story of a relationship that no longer needs words — two people reading each other's minds and still drifting apart.",
+    vocabulary: [
+      { word: "テレパシー", reading: "てれぱしー (terepashii)", meaning: "telepathy" },
+      { word: "心", reading: "こころ (kokoro)", meaning: "heart / mind" },
+      { word: "言葉", reading: "ことば (kotoba)", meaning: "words / language" },
+      { word: "伝わる", reading: "つたわる (tsutawaru)", meaning: "to be conveyed / get across" },
+      { word: "通じる", reading: "つうじる (tsuujiru)", meaning: "to be understood / to get through to someone" },
+      { word: "距離", reading: "きょり (kyori)", meaning: "distance" },
+    ],
   },
   {
     title: "Retry Now",
@@ -30,6 +46,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "3iUgKH8c7p4",
     difficulty: "Intermediate",
     context: "A fast, driving track about wanting to be reborn on the spot — right now, not after this life.",
+    vocabulary: [
+      { word: "輪廻", reading: "りんね (rinne)", meaning: "reincarnation / the cycle of rebirth" },
+      { word: "今すぐ", reading: "いますぐ (ima sugu)", meaning: "right now, this instant" },
+      { word: "生まれ変わる", reading: "うまれかわる (umarekawaru)", meaning: "to be reborn / start over as someone new" },
+      { word: "全部", reading: "ぜんぶ (zenbu)", meaning: "everything / all of it" },
+      { word: "嘘", reading: "うそ (uso)", meaning: "lie" },
+      { word: "未来", reading: "みらい (mirai)", meaning: "future" },
+    ],
   },
   {
     title: "O-henji Mada Kana?",
@@ -40,6 +64,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "8E8aWeY-pAc",
     difficulty: "Beginner",
     context: "A pun-packed, joke-driven song about waiting for a reply that never comes.",
+    vocabulary: [
+      { word: "お返事", reading: "おへんじ (ohenji)", meaning: "reply (polite)" },
+      { word: "待つ", reading: "まつ (matsu)", meaning: "to wait" },
+      { word: "送る", reading: "おくる (okuru)", meaning: "to send" },
+      { word: "既読", reading: "きどく (kidoku)", meaning: "read (of a message) — 'seen'" },
+      { word: "構文", reading: "こうぶん (koubun)", meaning: "sentence structure / phrasing" },
+      { word: "顔文字", reading: "かおもじ (kaomoji)", meaning: "text emoticon" },
+    ],
   },
   {
     title: "Zako",
@@ -50,6 +82,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "kqj7b59D85Y",
     difficulty: "Intermediate",
     context: "A rapid-fire taunt: the title means 'small fry', and the whole song is a boast delivered at full speed.",
+    vocabulary: [
+      { word: "雑魚", reading: "ざこ (zako)", meaning: "small fry / a nobody — slang for someone weak" },
+      { word: "弱い", reading: "よわい (yowai)", meaning: "weak" },
+      { word: "負ける", reading: "まける (makeru)", meaning: "to lose" },
+      { word: "悔しい", reading: "くやしい (kuyashii)", meaning: "frustrating / mortifying" },
+      { word: "叫ぶ", reading: "さけぶ (sakebu)", meaning: "to shout / scream" },
+      { word: "程度", reading: "ていど (teido)", meaning: "level / extent — 'that's all you've got'" },
+    ],
   },
   {
     title: "Don't Believe in T",
@@ -60,6 +100,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "Jtm6ikBIl0g",
     difficulty: "Advanced",
     context: "PinocchioP's warning about hearsay — don't believe what T says, or any story passed along without proof.",
+    vocabulary: [
+      { word: "信じる", reading: "しんじる (shinjiru)", meaning: "to believe / trust" },
+      { word: "話", reading: "はなし (hanashi)", meaning: "story / what someone says" },
+      { word: "噂", reading: "うわさ (uwasa)", meaning: "rumour" },
+      { word: "嘘", reading: "うそ (uso)", meaning: "lie" },
+      { word: "疑う", reading: "うたがう (utagau)", meaning: "to doubt" },
+      { word: "鵜呑み", reading: "うのみ (unomi)", meaning: "swallowing whole — believing something uncritically" },
+    ],
   },
   {
     title: "Cherry Pop",
@@ -70,6 +118,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "BI9Ue6JwJic",
     difficulty: "Intermediate",
     context: "A bright, sugary pop tune about a love that looks sweet on the surface.",
+    vocabulary: [
+      { word: "恋", reading: "こい (koi)", meaning: "romantic love" },
+      { word: "好き", reading: "すき (suki)", meaning: "to like / love" },
+      { word: "甘い", reading: "あまい (amai)", meaning: "sweet" },
+      { word: "約束", reading: "やくそく (yakusoku)", meaning: "promise" },
+      { word: "秘密", reading: "ひみつ (himitsu)", meaning: "secret" },
+      { word: "嘘", reading: "うそ (uso)", meaning: "lie" },
+    ],
   },
   {
     title: "LEMON MELON COOKIE",
@@ -80,6 +136,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "5l8VZEyNRH8",
     difficulty: "Beginner",
     context: "A bouncy, candy-coloured pop track built around its three-word hook.",
+    vocabulary: [
+      { word: "レモン", reading: "れもん (remon)", meaning: "lemon" },
+      { word: "メロン", reading: "めろん (meron)", meaning: "melon" },
+      { word: "クッキー", reading: "くっきー (kukkii)", meaning: "cookie" },
+      { word: "甘い", reading: "あまい (amai)", meaning: "sweet" },
+      { word: "味", reading: "あじ (aji)", meaning: "taste / flavour" },
+      { word: "好き", reading: "すき (suki)", meaning: "to like" },
+    ],
   },
   {
     title: "Odocchina",
@@ -90,6 +154,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "3-kI9rDwQ8E",
     difficulty: "Intermediate",
     context: "An energetic Miku and Teto SV dance track that barely stops moving.",
+    vocabulary: [
+      { word: "踊る", reading: "おどる (odoru)", meaning: "to dance" },
+      { word: "跳ねる", reading: "はねる (haneru)", meaning: "to jump / bound" },
+      { word: "歌う", reading: "うたう (utau)", meaning: "to sing" },
+      { word: "楽しい", reading: "たのしい (tanoshii)", meaning: "fun / enjoyable" },
+      { word: "手を叩く", reading: "てをたたく (te wo tataku)", meaning: "to clap one's hands" },
+      { word: "夜", reading: "よる (yoru)", meaning: "night" },
+    ],
   },
   {
     title: "D/N/A",
@@ -100,6 +172,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "j9RGt9Z_UeE",
     difficulty: "Advanced",
     context: "Azari's dark, glitchy track written for Teto and flower.",
+    vocabulary: [
+      { word: "本音", reading: "ほんね (honne)", meaning: "true feelings / what you really think" },
+      { word: "嘘", reading: "うそ (uso)", meaning: "lie" },
+      { word: "偽物", reading: "にせもの (nisemono)", meaning: "fake / imitation" },
+      { word: "壊れる", reading: "こわれる (kowareru)", meaning: "to break / fall apart" },
+      { word: "心", reading: "こころ (kokoro)", meaning: "heart / mind" },
+      { word: "踊る", reading: "おどる (odoru)", meaning: "to dance" },
+    ],
   },
   {
     title: "Kaijuu ni Naritai",
@@ -110,6 +190,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "TbakFPc4ZTw",
     difficulty: "Intermediate",
     context: "'I want to be a monster' — Sakuzyo's entry for the Project SEKAI Championship 2025.",
+    vocabulary: [
+      { word: "怪獣", reading: "かいじゅう (kaijuu)", meaning: "monster / kaiju" },
+      { word: "強さ", reading: "つよさ (tsuyosa)", meaning: "strength" },
+      { word: "弱さ", reading: "よわさ (yowasa)", meaning: "weakness" },
+      { word: "叫ぶ", reading: "さけぶ (sakebu)", meaning: "to shout / roar" },
+      { word: "泣く", reading: "なく (naku)", meaning: "to cry" },
+      { word: "世界", reading: "せかい (sekai)", meaning: "world" },
+    ],
   },
   {
     title: "Doomer",
@@ -120,6 +208,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "YcO-MxPf_Vg",
     difficulty: "Intermediate",
     context: "Tokyo Manaka's gloomy, propulsive track for Teto.",
+    vocabulary: [
+      { word: "終わる", reading: "おわる (owaru)", meaning: "to end / finish" },
+      { word: "希望", reading: "きぼう (kibou)", meaning: "hope" },
+      { word: "絶望", reading: "ぜつぼう (zetsubou)", meaning: "despair" },
+      { word: "眠る", reading: "ねむる (nemuru)", meaning: "to sleep" },
+      { word: "影", reading: "かげ (kage)", meaning: "shadow" },
+      { word: "息", reading: "いき (iki)", meaning: "breath" },
+    ],
   },
   {
     title: "Seijin Kunshi de Aritai",
@@ -130,6 +226,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "hrBjKBPNi1c",
     difficulty: "Advanced",
     context: "A wish to be a flawless saint — sung by Teto SV, where wanting to be good and being good are two different things.",
+    vocabulary: [
+      { word: "聖人君子", reading: "せいじんくんし (seijinkunshi)", meaning: "a person of perfect virtue / a saint" },
+      { word: "正しい", reading: "ただしい (tadashii)", meaning: "correct / right" },
+      { word: "汚い", reading: "きたない (kitanai)", meaning: "dirty / impure" },
+      { word: "願う", reading: "ねがう (negau)", meaning: "to wish / hope for" },
+      { word: "人間", reading: "にんげん (ningen)", meaning: "human being" },
+      { word: "心", reading: "こころ (kokoro)", meaning: "heart / mind" },
+    ],
   },
   {
     title: "Hajimari no Mirai",
@@ -140,6 +244,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "mxj3mW4jf7Q",
     difficulty: "Beginner",
     context: "The theme song for the Project SEKAI Colorful Stage movie, a clean, hopeful vocal throughout.",
+    vocabulary: [
+      { word: "はじまり", reading: "はじまり (hajimari)", meaning: "beginning / start" },
+      { word: "未来", reading: "みらい (mirai)", meaning: "future" },
+      { word: "歌", reading: "うた (uta)", meaning: "song" },
+      { word: "光", reading: "ひかり (hikari)", meaning: "light" },
+      { word: "空", reading: "そら (sora)", meaning: "sky" },
+      { word: "一緒", reading: "いっしょ (issho)", meaning: "together" },
+    ],
   },
   {
     title: "Tsumi to Batsu (Reloaded)",
@@ -150,6 +262,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "iD3oF5HkPms",
     difficulty: "Advanced",
     context: "DECO*27's rerecording of Crime and Punishment — a lover's threat to make the other pay for every lie.",
+    vocabulary: [
+      { word: "罪", reading: "つみ (tsumi)", meaning: "sin / crime" },
+      { word: "罰", reading: "ばつ (batsu)", meaning: "punishment" },
+      { word: "嘘", reading: "うそ (uso)", meaning: "lie" },
+      { word: "愛", reading: "あい (ai)", meaning: "love" },
+      { word: "許す", reading: "ゆるす (yurusu)", meaning: "to forgive" },
+      { word: "消える", reading: "きえる (kieru)", meaning: "to disappear" },
+    ],
   },
   {
     title: "Crystal Snow",
@@ -160,6 +280,14 @@ export const LATEST_ADDITIONS = [
     youtube_id: "QcHZdiVD0Ww",
     difficulty: "Beginner",
     context: "A quiet winter ballad from Aqu3ra, sung by Miku with a soft, unhurried melody.",
+    vocabulary: [
+      { word: "雪", reading: "ゆき (yuki)", meaning: "snow" },
+      { word: "冬", reading: "ふゆ (fuyu)", meaning: "winter" },
+      { word: "溶ける", reading: "とける (tokeru)", meaning: "to melt" },
+      { word: "白", reading: "しろ (shiro)", meaning: "white" },
+      { word: "冷たい", reading: "つめたい (tsumetai)", meaning: "cold (to the touch)" },
+      { word: "結晶", reading: "けっしょう (kesshou)", meaning: "crystal / a frozen crystal" },
+    ],
   },
   {
     title: "Kimikoi Quest",
@@ -170,5 +298,13 @@ export const LATEST_ADDITIONS = [
     youtube_id: "h3djT-YfSDQ",
     difficulty: "Beginner",
     context: "A cheerful quest-themed love song from irucaice and 市瀬るぽ, styled like a game adventure.",
+    vocabulary: [
+      { word: "恋", reading: "こい (koi)", meaning: "romantic love" },
+      { word: "冒険", reading: "ぼうけん (bouken)", meaning: "adventure" },
+      { word: "好き", reading: "すき (suki)", meaning: "to like / love" },
+      { word: "君", reading: "きみ (kimi)", meaning: "you" },
+      { word: "一緒", reading: "いっしょ (issho)", meaning: "together" },
+      { word: "ゴール", reading: "ごーる (gooru)", meaning: "goal / finish line" },
+    ],
   },
 ];
