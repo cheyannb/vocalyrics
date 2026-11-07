@@ -142,16 +142,6 @@ export const LATEST_ADDITIONS = [
     context: "The theme song for the Project SEKAI Colorful Stage movie, a clean, hopeful vocal throughout.",
   },
   {
-    title: "MAdEaR MAdEaR",
-    title_jp: "MAdEaR MAdEaR",
-    artist: "SLAVE.V-V-R",
-    category: "Intense & Edgy",
-    youtube_url: "https://www.youtube.com/watch?v=2P4u3QHOVpM",
-    youtube_id: "2P4u3QHOVpM",
-    difficulty: "Advanced",
-    context: "SLAVE.V-V-R's frantic, glitched-out wordplay, with the title itself split and scrambled.",
-  },
-  {
     title: "Tsumi to Batsu (Reloaded)",
     title_jp: "罪と罰 (Reloaded)",
     artist: "DECO*27",
@@ -180,15 +170,5 @@ export const LATEST_ADDITIONS = [
     youtube_id: "h3djT-YfSDQ",
     difficulty: "Beginner",
     context: "A cheerful quest-themed love song from irucaice and 市瀬るぽ, styled like a game adventure.",
-  },
-  {
-    title: "Static",
-    title_jp: "Static",
-    artist: "FLAVOR FOLEY",
-    category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=KlTNKOnfXFk",
-    youtube_id: "KlTNKOnfXFk",
-    difficulty: "Intermediate",
-    context: "A hazy, noise-soaked track from FLAVOR FOLEY, built around the hum of interference.",
   },
 ];
