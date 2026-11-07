@@ -1,0 +1,382 @@
+// Ghost Rule — DECO*27
+// Timed lyrics with vocabulary and grammar annotations.
+
+// The annotations below are grouped by phrase; the untouched characters of each
+// line (the spacing between phrases, the quote marks) are re-inserted as plain
+// segments so the rendered lyric reads exactly like the source line.
+function keepSourceText(lines) {
+  return lines.map((line) => {
+    if (!line.segments) return line;
+    const source = line.japanese;
+    const segments = [];
+    let cursor = 0;
+    line.segments.forEach((segment) => {
+      const at = source.indexOf(segment.text, cursor);
+      if (at === -1) {
+        segments.push(segment);
+        return;
+      }
+      if (at > cursor) segments.push({ text: source.slice(cursor, at) });
+      segments.push(segment);
+      cursor = at + segment.text.length;
+    });
+    if (cursor < source.length) segments.push({ text: source.slice(cursor) });
+    return { ...line, segments };
+  });
+}
+
+export const GhostRule = {
+  title: "Ghost Rule",
+  title_jp: "ゴーストルール",
+  artist: "DECO*27",
+  category: "Emotional & Artistic",
+  youtube_url: "https://www.youtube.com/watch?v=KushW6zvazM",
+  youtube_id: "KushW6zvazM",
+  difficulty: "Intermediate",
+  context:
+    "A ghost that knows perfectly well it is a ghost. The song opens with lies that can never be taken back — no statute of limitations, no taking back what was taken — and then becomes a mayday call: realize who I am, scold me, judge me, expose me, dance with me. The repeated admissions (マボロシ, 嘘憑き, 亡霊, 空白) are the speaker confessing that what you see was never really there. メーデー (mayday) is a real distress signal, disguised as a pop hook.",
+  lyrics_lines: keepSourceText([
+    // ── VERSE 1 ──
+    { time: 18.7, japanese: "どうだっていい言を　嘘って吐いて戻れない", segments: [
+      { text: "どうだっていい", reading: "どうだっていい", type: "vocab", meaning: "whatever / doesn't matter how — どうだって + いい, said with a shrug" },
+      { text: "言", reading: "こと", type: "vocab", meaning: "words / what one says — 言 written for こと" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "嘘って", reading: "うそって", type: "grammar", meaning: "'as a lie' — 嘘 (a lie) + って, treating it as the label" },
+      { text: "吐いて", reading: "ついて", type: "vocab", meaning: "to spit out / blurt (tsuite) — 吐く read つく: telling a lie" },
+      { text: "戻れない", reading: "もどれない", type: "grammar", meaning: "can't go back — potential negative of 戻る" },
+    ]},
+    { time: 23.15, japanese: "時効なんてやってこない　奪ったように奪われて", segments: [
+      { text: "時効", reading: "じこう", type: "vocab", meaning: "statute of limitations (jikou) — the point after which a crime stops counting" },
+      { text: "なんて", type: "grammar", meaning: "something like — dismissive quotation" },
+      { text: "やってこない", reading: "やってこない", type: "grammar", meaning: "won't come — やって来る in the negative" },
+      { text: "奪った", reading: "うばった", type: "vocab", meaning: "stole / took away (ubatta)" },
+      { text: "ように", type: "grammar", meaning: "just as / the way — comparison" },
+      { text: "奪われて", reading: "うばわれて", type: "grammar", meaning: "being robbed — passive of 奪う: what you take gets taken from you" },
+    ]},
+    { time: 27.75, japanese: "今日だって叶わない　思ったように騙せない", segments: [
+      { text: "今日", reading: "きょう", type: "vocab", meaning: "today (kyou)" },
+      { text: "だって", type: "grammar", meaning: "even — 今日だって: today of all days" },
+      { text: "叶わない", reading: "かなわない", type: "grammar", meaning: "won't come true — negative of 叶う" },
+      { text: "思った", reading: "おもった", type: "vocab", meaning: "thought / expected (omotta)" },
+      { text: "ように", type: "grammar", meaning: "the way — 'as I thought'" },
+      { text: "騙せない", reading: "だませない", type: "grammar", meaning: "can't deceive — potential negative of 騙す" },
+    ]},
+    { time: 32.28, japanese: "腐っている僕には　腐ったものが理解らない", segments: [
+      { text: "腐っている", reading: "くさっている", type: "grammar", meaning: "have rotted — 腐る in ている state form" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "I / me (boku)" },
+      { text: "には", type: "grammar", meaning: "to me — に + は, marking the one who can't tell" },
+      { text: "腐った", reading: "くさった", type: "vocab", meaning: "rotten (kusatta) — past form used as an adjective" },
+      { text: "もの", reading: "もの", type: "vocab", meaning: "thing (mono)" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "理解らない", reading: "わからない", type: "grammar", meaning: "don't understand — 理解る, a nonstandard reading of 分かる" },
+    ]},
+    { time: 36.44, japanese: "おいでココまで　捨てい", segments: [
+      { text: "おいで", reading: "おいで", type: "vocab", meaning: "come here (oide) — a coaxing invitation" },
+      { text: "ココ", reading: "ここ", type: "vocab", meaning: "here (koko) — written in katakana for emphasis" },
+      { text: "まで", type: "grammar", meaning: "as far as — 'right up to here'" },
+      { text: "捨てい", reading: "すてい", type: "vocab", meaning: "throw it away — 捨てる cut short; abandon it and come" },
+    ]},
+    // ── PRE-CHORUS ──
+    { time: 45.7, japanese: "「隠して仕舞ったんだ」", segments: [
+      { text: "隠して", reading: "かくして", type: "vocab", meaning: "hiding it (kakushite) — te-form of 隠す" },
+      { text: "仕舞った", reading: "しまった", type: "grammar", meaning: "ended up doing — てしまう in the past: it's done, and irreversible" },
+      { text: "んだ", type: "grammar", meaning: "explanatory ending — のだ, 'you see'" },
+    ]},
+    // ── CHORUS 1 ──
+    { time: 48.13, japanese: "メーデー　僕と判っても", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday (meedee) — the international distress call, borrowed as the hook" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "と", type: "grammar", meaning: "as — 僕と判る: to recognize (it) as me" },
+      { text: "判っても", reading: "わかっても", type: "grammar", meaning: "even if you figure it out — 判る + ても" },
+    ]},
+    { time: 50.11, japanese: "もう抱き締めなくて易々んだよ", segments: [
+      { text: "もう", reading: "もう", type: "grammar", meaning: "any more / already" },
+      { text: "抱き締めなくて", reading: "だきしめなくて", type: "grammar", meaning: "not holding (me) — negative te-form of 抱き締める" },
+      { text: "易々ん", reading: "たやすん", type: "vocab", meaning: "'easy, no problem' — 易々 (easy) bent into slang: it's easy for you not to hold me" },
+      { text: "だよ", type: "grammar", meaning: "copula + よ — flat assertion" },
+    ]},
+    { time: 52.69, japanese: "メーデー　僕が解ったら", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday — the distress call again" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "解ったら", reading: "わかったら", type: "grammar", meaning: "if you understand — 解る (to grasp) + たら conditional" },
+    ]},
+    { time: 54.7, japanese: "もう一度嘲笑ってくれるかな", segments: [
+      { text: "もう一度", reading: "もういちど", type: "vocab", meaning: "one more time (mou ichido)" },
+      { text: "嘲笑って", reading: "わらって", type: "vocab", meaning: "to laugh at / mock — 嘲笑う read わらう" },
+      { text: "くれる", type: "grammar", meaning: "will do (for me) — the favor-giving auxiliary" },
+      { text: "かな", type: "grammar", meaning: "I wonder — softened question" },
+    ]},
+    { time: 59.54, japanese: "マボロシだって知るんだよ", segments: [
+      { text: "マボロシ", reading: "まぼろし", type: "vocab", meaning: "illusion / phantom (maboroshi) — in katakana, as if it were a name" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it — 知る + explanatory んだ + よ" },
+    ]},
+    { time: 64.15, japanese: "嘘憑きだって知るんだよ　ネェ", segments: [
+      { text: "嘘憑き", reading: "うそつき", type: "vocab", meaning: "liar (usotsuki) — written with 憑く (to possess), as if lies haunt you" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+      { text: "ネェ", reading: "ねえ", type: "vocab", meaning: "hey / right? — drawn out, asking for an answer" },
+    ]},
+    // ── VERSE 2 ──
+    { time: 75.91, japanese: "NOだって言う筈が　キョドってYESを声に出す", segments: [
+      { text: "NOだって", type: "grammar", meaning: "'that it's NO' — English NO + だって" },
+      { text: "言う筈", reading: "いうはず", type: "vocab", meaning: "should say / meant to say (iu hazu) — 筈 marks expectation" },
+      { text: "が", type: "grammar", meaning: "but — the particle that turns expectation into a letdown" },
+      { text: "キョドって", reading: "きょどって", type: "vocab", meaning: "getting flustered — キョドる, slang for losing composure" },
+      { text: "YESを", type: "grammar", meaning: "YES — English, with the object particle を" },
+      { text: "声に出す", reading: "こえにだす", type: "vocab", meaning: "say out loud / voice (koe ni dasu)" },
+    ]},
+    { time: 80.3, japanese: "後悔の脆弱は　騙したほうが正義なの", segments: [
+      { text: "後悔", reading: "こうかい", type: "vocab", meaning: "regret (koukai)" },
+      { text: "の", type: "grammar", meaning: "possessive / linking particle" },
+      { text: "脆弱", reading: "ぜいじゃく", type: "vocab", meaning: "fragility / weakness (zeijaku)" },
+      { text: "は", type: "grammar", meaning: "topic marker particle" },
+      { text: "騙した", reading: "だました", type: "vocab", meaning: "deceived (damashita)" },
+      { text: "ほうが", type: "grammar", meaning: "the one who did — ほうが, comparing which side is 'right'" },
+      { text: "正義", reading: "せいぎ", type: "vocab", meaning: "justice (seigi)" },
+      { text: "なの", type: "grammar", meaning: "explanatory な + の — 'so it's justice, is it'" },
+    ]},
+    { time: 84.96, japanese: "卑怯だって構わない　祈っておいてそれはない", segments: [
+      { text: "卑怯", reading: "ひきょう", type: "vocab", meaning: "cowardly / unfair (hikyou)" },
+      { text: "だって", type: "grammar", meaning: "even if it's — だ + って" },
+      { text: "構わない", reading: "かまわない", type: "grammar", meaning: "don't care — negative of 構う" },
+      { text: "祈って", reading: "いのって", type: "vocab", meaning: "praying (inotte) — te-form of 祈る" },
+      { text: "おいて", type: "grammar", meaning: "do in advance — ておく: pray first, then act" },
+      { text: "それはない", reading: "それはない", type: "grammar", meaning: "'that's not fair' — それは + ない: that doesn't exist / no way" },
+    ]},
+    { time: 89.43, japanese: "飾っていた饒舌が　墓穴を掘って焼ける様", segments: [
+      { text: "飾っていた", reading: "かざっていた", type: "vocab", meaning: "was dressed up / putting on airs — 飾る in ていた" },
+      { text: "饒舌", reading: "じょうぜつ", type: "vocab", meaning: "talkativeness / glibness (jouzetsu)" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "墓穴", reading: "ぼけつ", type: "vocab", meaning: "grave (boketsu) — 墓穴を掘る: to dig your own grave" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "掘って", reading: "ほって", type: "vocab", meaning: "digging (hotte) — te-form of 掘る" },
+      { text: "焼ける", reading: "やける", type: "vocab", meaning: "to burn (yakeru)" },
+      { text: "様", reading: "さま", type: "vocab", meaning: "the way / appearance (sama) — 'the look of it burning'" },
+    ]},
+    { time: 93.66, japanese: "負い目どこまで　灰色", segments: [
+      { text: "負い目", reading: "おいめ", type: "vocab", meaning: "sense of guilt / debt (oime) — literally 'a debt you carry'" },
+      { text: "どこまで", reading: "どこまで", type: "vocab", meaning: "how far — 'how far does it go?'" },
+      { text: "灰色", reading: "はいいろ", type: "vocab", meaning: "gray (haiiro) — neither black nor white" },
+    ]},
+    { time: 102.81, japanese: "被害者ヅラしたって", segments: [
+      { text: "被害者", reading: "ひがいしゃ", type: "vocab", meaning: "victim (higai-sha)" },
+      { text: "ヅラ", reading: "づら", type: "vocab", meaning: "'-faced' / a put-on face — 面 (づら): wearing the victim's expression" },
+      { text: "したって", reading: "したって", type: "grammar", meaning: "even if you do — する + たって (even if)" },
+    ]},
+    // ── CHORUS 2 ──
+    { time: 105.2, japanese: "メーデー　僕を叱ってよ", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday — the distress call" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "叱って", reading: "しかって", type: "vocab", meaning: "scold (me) — 叱る in te-form, a plea" },
+      { text: "よ", type: "grammar", meaning: "sentence-ending emphasis particle" },
+    ]},
+    { time: 107.3, japanese: "正直者が夢見たいなら", segments: [
+      { text: "正直者", reading: "しょうじきもの", type: "vocab", meaning: "honest person (shoujikimono) — the proverb's 'honest fool'" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "夢見たい", reading: "ゆめみたい", type: "vocab", meaning: "wants to dream — 夢を見る + たい" },
+      { text: "なら", type: "grammar", meaning: "if — conditional" },
+    ]},
+    { time: 109.57, japanese: "メーデー　僕を裁いてよ", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "裁いて", reading: "さばいて", type: "vocab", meaning: "judge / pass sentence on (sabaite) — 裁く in te-form" },
+      { text: "よ", type: "grammar", meaning: "sentence-ending emphasis particle" },
+    ]},
+    { time: 111.84, japanese: "最後まで甘えてしまうのは", segments: [
+      { text: "最後", reading: "さいご", type: "vocab", meaning: "the end / the last (saigo)" },
+      { text: "まで", type: "grammar", meaning: "until — 最後まで: right to the very end" },
+      { text: "甘えて", reading: "あまえて", type: "vocab", meaning: "leaning on someone / acting spoiled (amaete) — 甘える" },
+      { text: "しまう", type: "grammar", meaning: "end up doing — regretful てしまう" },
+      { text: "のは", type: "grammar", meaning: "the fact that — nominalizer の + topic は" },
+    ]},
+    { time: 116.69, japanese: "亡霊だって知るんだよ", segments: [
+      { text: "亡霊", reading: "ぼうれい", type: "vocab", meaning: "ghost / specter (bourei) — the dead still walking" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+    ]},
+    { time: 121.28, japanese: "空白だって知るんだよ　ネェ", segments: [
+      { text: "空白", reading: "くうはく", type: "vocab", meaning: "blank / emptiness (kuuhaku) — the space where a person should be" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+      { text: "ネェ", reading: "ねえ", type: "vocab", meaning: "hey / right? — asking to be answered" },
+    ]},
+    // ── BRIDGE ──
+    { time: 132.71, japanese: "足りないものを望んだら　僕じゃない僕に出逢ったよ", segments: [
+      { text: "足りない", reading: "たりない", type: "vocab", meaning: "not enough / missing (tarinai)" },
+      { text: "もの", reading: "もの", type: "vocab", meaning: "thing (mono)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "望んだら", reading: "のぞんだら", type: "grammar", meaning: "if you wish for it — 望む + たら" },
+      { text: "僕じゃない", reading: "ぼくじゃない", type: "grammar", meaning: "'not me' — 僕 + じゃない" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku) — the self that shouldn't exist" },
+      { text: "に", type: "grammar", meaning: "target particle — met WITH" },
+      { text: "出逢った", reading: "であった", type: "vocab", meaning: "met / encountered (deatta) — 出逢う, the fateful 'meet'" },
+      { text: "よ", type: "grammar", meaning: "sentence-ending emphasis particle" },
+    ]},
+    { time: 137.22, japanese: "それでも前に進んだの　クラクラしちゃう夜も", segments: [
+      { text: "それでも", reading: "それでも", type: "grammar", meaning: "even so (sore demo)" },
+      { text: "前に", reading: "まえに", type: "vocab", meaning: "forward (mae ni)" },
+      { text: "進んだ", reading: "すすんだ", type: "vocab", meaning: "advanced / moved on (susunda)" },
+      { text: "の", type: "grammar", meaning: "explanatory sentence-ending particle" },
+      { text: "クラクラ", reading: "くらくら", type: "vocab", meaning: "dizzy / spinning (kurakura) — onomatopoeia" },
+      { text: "しちゃう", reading: "しちゃう", type: "grammar", meaning: "end up being — してしまう contracted" },
+      { text: "夜", reading: "よる", type: "vocab", meaning: "night (yoru)" },
+      { text: "も", type: "grammar", meaning: "even / too — the particle" },
+    ]},
+    { time: 141.84, japanese: "足りない僕を愛してよ　EGO-MAMAが僕を育てたの", segments: [
+      { text: "足りない", reading: "たりない", type: "vocab", meaning: "insufficient — the unfinished me" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "愛して", reading: "あいして", type: "vocab", meaning: "love (me) — 愛する in te-form, half request half command" },
+      { text: "よ", type: "grammar", meaning: "sentence-ending emphasis particle" },
+      { text: "EGO-MAMA", type: "vocab", meaning: "ego-mama — わがまま (selfishness) in English letters: selfishness as a parent" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "育てた", reading: "そだてた", type: "vocab", meaning: "raised / brought up (sodateta)" },
+      { text: "の", type: "grammar", meaning: "explanatory sentence-ending particle" },
+    ]},
+    { time: 146.35, japanese: "きみには僕が見えるかな　孤毒なピエロが", segments: [
+      { text: "きみ", reading: "きみ", type: "vocab", meaning: "you (kimi)" },
+      { text: "には", type: "grammar", meaning: "to you — に + は" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "見える", reading: "みえる", type: "grammar", meaning: "can be seen — the potential form 見える" },
+      { text: "かな", type: "grammar", meaning: "I wonder — a genuine question" },
+      { text: "孤毒", reading: "こどく", type: "vocab", meaning: "solitary poison — a pun on 孤独 (kodoku, loneliness)" },
+      { text: "な", type: "grammar", meaning: "na-adjective connector" },
+      { text: "ピエロ", type: "vocab", meaning: "clown / pierrot (piero) — the painted face" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+    ]},
+    // ── FINAL CHORUS ──
+    { time: 150.97, japanese: "メーデー　僕と判っても", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "と", type: "grammar", meaning: "as — recognize it as me" },
+      { text: "判っても", reading: "わかっても", type: "grammar", meaning: "even if you figure it out" },
+    ]},
+    { time: 153.01, japanese: "もう抱き締めなくて易々んだよ", segments: [
+      { text: "もう", reading: "もう", type: "grammar", meaning: "any more" },
+      { text: "抱き締めなくて", reading: "だきしめなくて", type: "grammar", meaning: "not holding (me) — negative te-form" },
+      { text: "易々ん", reading: "たやすん", type: "vocab", meaning: "'easy, no problem' — it costs you nothing to let go" },
+      { text: "だよ", type: "grammar", meaning: "copula + よ" },
+    ]},
+    { time: 155.51, japanese: "メーデー　僕が解ったら", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "解ったら", reading: "わかったら", type: "grammar", meaning: "if you understand — 解る + たら" },
+    ]},
+    { time: 157.84, japanese: "もう一度嘲笑ってくれるかな", segments: [
+      { text: "もう一度", reading: "もういちど", type: "vocab", meaning: "one more time (mou ichido)" },
+      { text: "嘲笑って", reading: "わらって", type: "vocab", meaning: "laugh at / mock (waratte)" },
+      { text: "くれる", type: "grammar", meaning: "will do for me" },
+      { text: "かな", type: "grammar", meaning: "I wonder" },
+    ]},
+    { time: 160.17, japanese: "メーデー　僕を叱ってよ", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "叱って", reading: "しかって", type: "vocab", meaning: "scold (me)" },
+      { text: "よ", type: "grammar", meaning: "emphasis particle" },
+    ]},
+    { time: 162.14, japanese: "正直者が夢見たいなら", segments: [
+      { text: "正直者", reading: "しょうじきもの", type: "vocab", meaning: "honest person" },
+      { text: "が", type: "grammar", meaning: "subject marker particle" },
+      { text: "夢見たい", reading: "ゆめみたい", type: "vocab", meaning: "wants to dream" },
+      { text: "なら", type: "grammar", meaning: "if" },
+    ]},
+    { time: 164.71, japanese: "メーデー　僕を裁いてよ", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "裁いて", reading: "さばいて", type: "vocab", meaning: "judge (me) — 裁く in te-form" },
+      { text: "よ", type: "grammar", meaning: "emphasis particle" },
+    ]},
+    { time: 166.99, japanese: "最後まで甘えてしまうのは", segments: [
+      { text: "最後", reading: "さいご", type: "vocab", meaning: "the end (saigo)" },
+      { text: "まで", type: "grammar", meaning: "until — 最後まで" },
+      { text: "甘えて", reading: "あまえて", type: "vocab", meaning: "leaning on / acting spoiled" },
+      { text: "しまう", type: "grammar", meaning: "end up doing" },
+      { text: "のは", type: "grammar", meaning: "the fact that — nominalizer + topic" },
+    ]},
+    { time: 169.39, japanese: "メーデー　僕を暴いてよ", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "暴いて", reading: "ばいて", type: "vocab", meaning: "expose / lay bare (baite) — 暴く: dig up the truth" },
+      { text: "よ", type: "grammar", meaning: "emphasis particle" },
+    ]},
+    { time: 171.27, japanese: "もう直終わるこの世界から", segments: [
+      { text: "もう直", reading: "もうすぐ", type: "vocab", meaning: "very soon (mou sugu) — 直 written for すぐ" },
+      { text: "終わる", reading: "おわる", type: "vocab", meaning: "to end (owaru)" },
+      { text: "この", type: "grammar", meaning: "this — demonstrative" },
+      { text: "世界", reading: "せかい", type: "vocab", meaning: "world (sekai)" },
+      { text: "から", type: "grammar", meaning: "from — the starting point" },
+    ]},
+    { time: 173.65, japanese: "メーデー　僕と踊ってよ", segments: [
+      { text: "メーデー", type: "vocab", meaning: "mayday" },
+      { text: "僕", reading: "ぼく", type: "vocab", meaning: "me (boku)" },
+      { text: "と", type: "grammar", meaning: "with — the partner particle" },
+      { text: "踊って", reading: "おどって", type: "vocab", meaning: "dance (with me) — 踊る in te-form" },
+      { text: "よ", type: "grammar", meaning: "emphasis particle" },
+    ]},
+    { time: 175.92, japanese: "最初からイナイと理解ってた？　嗚呼", segments: [
+      { text: "最初", reading: "さいしょ", type: "vocab", meaning: "the beginning (saisho)" },
+      { text: "から", type: "grammar", meaning: "from — 最初から: from the very start" },
+      { text: "イナイ", reading: "いない", type: "vocab", meaning: "not here / doesn't exist (inai) — in katakana, as if it were a label" },
+      { text: "と", type: "grammar", meaning: "quotation particle — 'that (I'm) not here'" },
+      { text: "理解ってた", reading: "わかってた", type: "grammar", meaning: "did you understand — 理解る in ていた" },
+      { text: "？", type: "grammar", meaning: "question mark — the line turns into a question" },
+      { text: "嗚呼", reading: "ああ", type: "vocab", meaning: "ah — a sigh that answers its own question" },
+    ]},
+    // ── OUTRO ──
+    { time: 180.69, japanese: "マボロシだって知るんだよ", segments: [
+      { text: "マボロシ", reading: "まぼろし", type: "vocab", meaning: "illusion (maboroshi)" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+    ]},
+    { time: 185.26, japanese: "嘘憑きだって知るんだよ", segments: [
+      { text: "嘘憑き", reading: "うそつき", type: "vocab", meaning: "liar (usotsuki)" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+    ]},
+    { time: 189.81, japanese: "亡霊だって知るんだよ", segments: [
+      { text: "亡霊", reading: "ぼうれい", type: "vocab", meaning: "ghost / specter (bourei)" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+    ]},
+    { time: 194.31, japanese: "空白だって知るんだよ", segments: [
+      { text: "空白", reading: "くうはく", type: "vocab", meaning: "blank / emptiness (kuuhaku)" },
+      { text: "だって", type: "grammar", meaning: "that it is — quotation って" },
+      { text: "知るんだよ", reading: "しるんだよ", type: "grammar", meaning: "you know it" },
+    ]},
+    { time: 197.12, japanese: "どうだっていい言を　嘘って吐いて戻れない", segments: [
+      { text: "どうだっていい", reading: "どうだっていい", type: "vocab", meaning: "whatever / doesn't matter" },
+      { text: "言", reading: "こと", type: "vocab", meaning: "words (koto)" },
+      { text: "を", type: "grammar", meaning: "object marker particle" },
+      { text: "嘘って", reading: "うそって", type: "grammar", meaning: "'as a lie' — 嘘 + って" },
+      { text: "吐いて", reading: "ついて", type: "vocab", meaning: "to tell / spit out (a lie)" },
+      { text: "戻れない", reading: "もどれない", type: "grammar", meaning: "can't go back" },
+    ]},
+    { time: 201.55, japanese: "時効なんてやってこない　奪ったように奪われて", segments: [
+      { text: "時効", reading: "じこう", type: "vocab", meaning: "statute of limitations (jikou)" },
+      { text: "なんて", type: "grammar", meaning: "something like" },
+      { text: "やってこない", reading: "やってこない", type: "grammar", meaning: "won't come" },
+      { text: "奪った", reading: "うばった", type: "vocab", meaning: "stole (ubatta)" },
+      { text: "ように", type: "grammar", meaning: "just as / the way" },
+      { text: "奪われて", reading: "うばわれて", type: "grammar", meaning: "being robbed — passive of 奪う" },
+    ]},
+  ]),
+  vocabulary: [
+    { word: "幽霊", reading: "ゆうれい (yuurei)", meaning: "ghost" },
+    { word: "亡霊", reading: "ぼうれい (bourei)", meaning: "specter / ghost" },
+    { word: "時効", reading: "じこう (jikou)", meaning: "statute of limitations" },
+    { word: "卑怯", reading: "ひきょう (hikyou)", meaning: "cowardly / unfair" },
+    { word: "饒舌", reading: "じょうぜつ (jouzetsu)", meaning: "talkativeness / glibness" },
+    { word: "空白", reading: "くうはく (kuuhaku)", meaning: "blank / emptiness" },
+  ],
+};

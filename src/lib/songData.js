@@ -8,6 +8,7 @@ import { DonutHole } from "@/lib/songs/DonutHole";
 import { AlienAlien } from "@/lib/songs/AlienAlien";
 import { Godish } from "@/lib/songs/Godish";
 import { Vampire } from "@/lib/songs/Vampire";
+import { GhostRule } from "@/lib/songs/GhostRule";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2228,22 +2229,7 @@ export const SONG_DATA = [
   // Category 5: Emotional & Artistic
   Godish,
   Vampire,
-  {
-    title: "Ghost Rule",
-    title_jp: "ゴーストルール",
-    artist: "DECO*27",
-    category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=KushW6zvazM",
-    youtube_id: "KushW6zvazM",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "幽霊", reading: "ゆうれい (yuurei)", meaning: "ghost" },
-      { word: "消える", reading: "きえる (kieru)", meaning: "to disappear" },
-      { word: "存在", reading: "そんざい (sonzai)", meaning: "existence" },
-      { word: "透明", reading: "とうめい (toumei)", meaning: "transparent" },
-      { word: "叫ぶ", reading: "さけぶ (sakebu)", meaning: "to scream" },
-    ]
-  },
+  GhostRule,
   {
     title: "Tell Your World",
     title_jp: "Tell Your World",
