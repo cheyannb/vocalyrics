@@ -11,6 +11,7 @@ import { Vampire } from "@/lib/songs/Vampire";
 import { GhostRule } from "@/lib/songs/GhostRule";
 import { TellYourWorld } from "@/lib/songs/TellYourWorld";
 import { OddsEnds } from "@/lib/songs/OddsEnds";
+import { LATEST_ADDITIONS } from "@/lib/songs/LatestAdditions";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2234,6 +2235,8 @@ export const SONG_DATA = [
   GhostRule,
   TellYourWorld,
   OddsEnds,
+  // Newest additions (catalog entries; annotated lyrics in progress)
+  ...LATEST_ADDITIONS,
 ];
 
 export const CATEGORIES = [
