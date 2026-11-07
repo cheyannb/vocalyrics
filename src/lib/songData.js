@@ -10,6 +10,7 @@ import { Godish } from "@/lib/songs/Godish";
 import { Vampire } from "@/lib/songs/Vampire";
 import { GhostRule } from "@/lib/songs/GhostRule";
 import { TellYourWorld } from "@/lib/songs/TellYourWorld";
+import { OddsEnds } from "@/lib/songs/OddsEnds";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2232,22 +2233,7 @@ export const SONG_DATA = [
   Vampire,
   GhostRule,
   TellYourWorld,
-  {
-    title: "Odds & Ends",
-    title_jp: "Odds&Ends",
-    artist: "ryo (supercell)",
-    category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=dGNoCICGmo0",
-    youtube_id: "dGNoCICGmo0",
-    difficulty: "Intermediate",
-    vocabulary: [
-      { word: "歌", reading: "うた (uta)", meaning: "song" },
-      { word: "声", reading: "こえ (koe)", meaning: "voice" },
-      { word: "想い", reading: "おもい (omoi)", meaning: "thoughts/feelings" },
-      { word: "守る", reading: "まもる (mamoru)", meaning: "to protect" },
-      { word: "大切", reading: "たいせつ (taisetsu)", meaning: "precious/important" },
-    ]
-  },
+  OddsEnds,
 ];
 
 export const CATEGORIES = [
