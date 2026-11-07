@@ -9,6 +9,7 @@ import { AlienAlien } from "@/lib/songs/AlienAlien";
 import { Godish } from "@/lib/songs/Godish";
 import { Vampire } from "@/lib/songs/Vampire";
 import { GhostRule } from "@/lib/songs/GhostRule";
+import { TellYourWorld } from "@/lib/songs/TellYourWorld";
 
 export const SONG_DATA = [
   // Category 1: Highest-Viewed Hits
@@ -2230,22 +2231,7 @@ export const SONG_DATA = [
   Godish,
   Vampire,
   GhostRule,
-  {
-    title: "Tell Your World",
-    title_jp: "Tell Your World",
-    artist: "kz (livetune)",
-    category: "Emotional & Artistic",
-    youtube_url: "https://www.youtube.com/watch?v=PqJNc9KVIZE",
-    youtube_id: "PqJNc9KVIZE",
-    difficulty: "Beginner",
-    vocabulary: [
-      { word: "繋がる", reading: "つながる (tsunagaru)", meaning: "to connect" },
-      { word: "伝える", reading: "つたえる (tsutaeru)", meaning: "to convey/tell" },
-      { word: "世界", reading: "せかい (sekai)", meaning: "world" },
-      { word: "届ける", reading: "とどける (todokeru)", meaning: "to deliver" },
-      { word: "光", reading: "ひかり (hikari)", meaning: "light" },
-    ]
-  },
+  TellYourWorld,
   {
     title: "Odds & Ends",
     title_jp: "Odds&Ends",

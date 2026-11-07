@@ -1,29 +1,6 @@
 // Ghost Rule — DECO*27
 // Timed lyrics with vocabulary and grammar annotations.
-
-// The annotations below are grouped by phrase; the untouched characters of each
-// line (the spacing between phrases, the quote marks) are re-inserted as plain
-// segments so the rendered lyric reads exactly like the source line.
-function keepSourceText(lines) {
-  return lines.map((line) => {
-    if (!line.segments) return line;
-    const source = line.japanese;
-    const segments = [];
-    let cursor = 0;
-    line.segments.forEach((segment) => {
-      const at = source.indexOf(segment.text, cursor);
-      if (at === -1) {
-        segments.push(segment);
-        return;
-      }
-      if (at > cursor) segments.push({ text: source.slice(cursor, at) });
-      segments.push(segment);
-      cursor = at + segment.text.length;
-    });
-    if (cursor < source.length) segments.push({ text: source.slice(cursor) });
-    return { ...line, segments };
-  });
-}
+import { keepSourceText } from "@/lib/songText";
 
 export const GhostRule = {
   title: "Ghost Rule",
